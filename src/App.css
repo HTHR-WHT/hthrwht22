@@ -14,7 +14,32 @@
 }
 
 .App-header {
-  background-color: #282c34;
+   /*diagonal yellow & teal*/
+  /* 
+  background: rgb(183, 247, 199);
+  background: linear-gradient(
+    201deg,
+    rgba(183, 247, 199, 1) 0%,
+    rgba(234, 237, 125, 1) 35%,
+    rgba(75, 219, 249, 1) 100%
+  ); */
+
+  /*linear yellow & teal*/
+  /* 
+  background: rgb(18, 246, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(18, 246, 220, 0.9024203431372549) 0%,
+    rgba(253, 212, 45, 0.8435968137254902) 100%
+  ); */
+  
+  /*radial pink & light blue*/
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
   min-height: 100vh;
   display: flex;
   flex-direction: column;
