@@ -1,32 +1,21 @@
-/*
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import { withRouter, Route, Switch, Redirect } from "react-router-dom";
-
-import AllProjects from "./components/AllProjects";
-import SingleProject from "./components/SingleProject";
+import React from "react";
+import { Route, Routes } from "react-router";
 import LandingPage from "./components/LandingPage";
+import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
 
 
 
- const Routes = () => {
-  
-    render() {  
+const Views = () => {
       return (
         <>
-            <Switch>
-              <Route path="/" exact component={LandingPage} />
-              <Route exact path="/projects" component={Allprojects} />
-              <Route path="/projects/:id" component={SingleProject} />
-              <Route exact path="/resume" component={Resume} />
-            </Switch>
+            <Routes>
+              <Route path="/home"  component={LandingPage} />
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/resume" component={Resume} />
+            </Routes>
         </>
-      );
-    }
-  }
+      ); 
+  };
   
-  // The `withRouter` wrapper makes sure that updates are not blocked
-  // when the url changes
-  export default withRouter(connect(mapState, mapDispatch)(Routes));
-*/
+  export default Views;
