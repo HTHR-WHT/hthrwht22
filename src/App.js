@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h3>Heather White</h3>
         <p>
-          fullstack software engineer for hire y'all
+          full stack software engineer
         </p>
       </header>
     </div>
@@ -16,3 +16,25 @@ function App() {
 }
 
 export default App;
+
+/*
+import React from "react";
+import Footer from "./components/Footer";
+
+import Navbar from "./components/Navbar";
+import Routes from "./Routes";
+
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Routes />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default App;
+*/
