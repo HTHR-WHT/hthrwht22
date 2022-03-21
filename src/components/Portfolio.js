@@ -1,68 +1,65 @@
-/*
-import React from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { fetchProjects, deleteProject } from "../redux/projects";
+import { React, useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+import Navbar from "./NavBar";
+import allProjects from "../seed/projects";
 
-export class AllProjects extends React.Component {
-  componentDidMount() {
-    this.props.getProjects();
+const Portfolio = () => {
+  const [projects, setProjects] = useState(null);
+
+  useEffect(() => {
+    setProjects(allProjects);
+  }, []);
+
+  if (projects === [] || projects === null) {
+    return (
+      <>
+        <p>hang tight...fetching projects</p>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Navbar />
+        {projects.map((project) => (
+          <div className="projectContainer" key={project.name}>
+            <div className="containerLeft">
+              <img
+                src={`${project.image}`}
+                alt={`Screen capture of ${project.name}`}
+              />
+            </div>
+            <div className="containerRight">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+              <p>Tech Stack: {project.tech}</p>
+              <a
+                href={`https://github.com/${project.repo}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={project.github}
+                  alt="Link to github repo."
+                />
+              </a>
+              <a
+                href={`${project.path}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={project.link}
+                  alt="Link to project demo."
+                />
+              </a>
+            </div>
+          </div>
+        ))}
+      </>
+    );
   }
-  componentDidUpdate(prevProps) {
-    if (prevProps.projects.length !== this.props.projects.length) {
-      this.props.getProjects();
-    }
-  }
-  render() {
-    const projects = this.props.projects;
-    if (projects === [] || projects === undefined) {
-      return (
-        <div>
-          <br />
-          <h1>There are no robots currently registered in the database.</h1>
-          <br />
-          <Link id="addButton" to={"/addProject"}>
-            <button type="submit">Add Project</button>
-          </Link>
-          <br />
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <br />
-          <Link id="addButton" to={"/addProject"}>
-            <button type="submit">Add Project</button>
-          </Link>
-          <br />
-          {projects.map((project) => {
-            return (
-              <div className="container border" key={project.id}>
-                <br />
-                <Link to={`/projects/${project.id}`}>
-                  <h2>{project.title}</h2>
-                </Link>
-                <div className="projectDetails">
-                  <h4>Deadline: {project.deadline.slice(0, 10)}</h4>
-                  <p>Description: {project.description}</p>
-                </div>
-                <form onSubmit={(event) => event.preventDefault()}>
-                  <button
-                    type="submit"
-                    className="deleteButton"
-                    onClick={() => this.props.deleteProject(project.id)}
-                  >
-                    Delete Project
-                  </button>
-                </form>
-                <br />
-              </div>
-            );
-          })}
-          <br />
-        </div>
-      );
-    }
-  }
-}
-*/
+};
+
+export default Portfolio;
+
+
