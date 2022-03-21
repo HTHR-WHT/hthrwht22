@@ -32,6 +32,7 @@ body {
 /*
 ***There is no background-opacity property in CSS, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.
 */
+/*HOME PAGE BACKGROUND IMAGE*/
 .landing::after {
   content: "";
   background: url("./assets/cmyk_HWhite21.png");
@@ -47,7 +48,7 @@ body {
   background-size: cover;
   background-color: #cccccc;
 }
-
+/*NAV CSS*/
 .navLinks {
   display: flex;
   flex-direction: row;
@@ -101,6 +102,7 @@ a:hover {
   color: red;
 } */
 
+/*HOME PAGE HEADER CSS*/
 #myName {
   font-family: "Raleway";
   font-size: 72px;
@@ -117,5 +119,15 @@ a:hover {
   text-align: center;
   letter-spacing: 20px;
   margin-top: 0px;
+}
+
+/*PORTFOLIO PAGE CSS*/
+/* .projectContainer {
 
 }
+.containerLeft {
+  
+}
+.containerRight {
+  
+} */
