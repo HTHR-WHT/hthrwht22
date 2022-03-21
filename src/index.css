@@ -65,17 +65,29 @@ body {
 }
 
 #leftLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 35px;
   margin-left: 10px;
   color: black;
 }
 
 #centerLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 35px;
   color: black;
 }
 
 #rightLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 35px;
   margin-right: 10px;
   color: black;
