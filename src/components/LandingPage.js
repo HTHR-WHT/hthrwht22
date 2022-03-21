@@ -1,16 +1,18 @@
-/*
 import React from "react";
-import { Link } from "react-router-dom";
+import Navbar from "./NavBar";
 
 const LandingPage = () => {
   return (
-    <div className="landingpage">
-      <p>Simple, Natural, Hot Sauce</p>
-      <Link to="/hotsauces">
-        <button id="landingPage-btn">Browse Our Hot Sauces</button>
-      </Link>
-    </div>
+    <>
+      <div className="landing">
+        <Navbar />
+        <header>
+          <h1 id="myName" >Heather White</h1>
+          <h3 id="sweTitle" >software engineer</h3>
+        </header>
+      </div>
+    </>
   );
 };
+
 export default LandingPage;
-*/

@@ -1,65 +1,46 @@
-/*
 import React from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { logout } from "../store";
+import linkedInLogo from "../assets/icons8-linkedin-50.png";
+import githubLogo from "../assets/icons8-github-50.png";
 
-const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
-  <header>
-    <>
-      <Link to={isLoggedIn ? "/home" : "/"} id="logo-container">
-        <img src="hotnsaucylogo.png" id="logo" alt="HotNSaucy logo" />
-        <span className="flame-gradient">Hot 'N' Saucy</span>
-      </Link>
-    </>
-    <nav>
-      {isLoggedIn ? (
-        <>
-          <div id="leftLinks">
-            {/* The nav will show these links after user logs in */ /*}
-            <a href="#" onClick={handleClick}>
-              LOGOUT
-            </a>
-          </div>
-          {/* The nav will show these links after you log in as Admin */ /*}
-          {isAdmin ? (
-            <div id="centerLinks">
-              <Link to="/customers">CUSTOMERS</Link>
-              <Link to="/hotsauces/add">ADD HOT SAUCE</Link>
-            </div>
-          ) : (
-            ""
-          )}
-        </>
-      ) : (
-        <div id="leftLinks">
-          {/* The nav will show these links when not logged in *//*}
-          <Link to="/login">LOGIN</Link>
-          <Link to="/signup">SIGN UP</Link>
-        </div>
-      )}
+const Navbar = () => {
+  return (
+    <nav className="navLinks">
+      <div id="leftLinks">
+        <a
+          href="https://www.linkedin.com/in/heather-white-nyc/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            className="logoLinks"
+            src={linkedInLogo}
+            alt="Link to engineer's LinkedIn page."
+          />
+        </a>
+        <Link to="/resume" style={{ textDecoration: "none" }}>
+          resume
+        </Link>
+      </div>
+      <div id="centerLink">
+        <Link to="/home" style={{ textDecoration: "none" }}>
+          HTHR-WHT
+        </Link>
+      </div>
       <div id="rightLinks">
-        <Link to="/hotsauces">SHOP</Link>
-        <Link to="/cart">CART</Link>
+        <Link to="/portfolio" style={{ textDecoration: "none" }}>
+          portfolio
+        </Link>
+        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
+          <img
+            className="logoLinks"
+            src={githubLogo}
+            alt="Link to engineer's github page."
+          />
+        </a>
       </div>
     </nav>
-  </header>
-);
-
-const mapState = (state) => {
-  return {
-    isLoggedIn: !!state.auth.id,
-    isAdmin: !!state.auth.isAdmin,
-  };
+  );
 };
 
-const mapDispatch = (dispatch) => {
-  return {
-    handleClick() {
-      dispatch(logout());
-    },
-  };
-};
-
-export default connect(mapState, mapDispatch)(Navbar);
-*/
+export default Navbar;
