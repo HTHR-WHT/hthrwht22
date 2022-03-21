@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
-import Portfolio from "./components/Portfolio";
-import Resume from "./components/Resume";
+// import Portfolio from "./components/Portfolio";
+// import Resume from "./components/Resume";
 
 const App = () => {
   return (
