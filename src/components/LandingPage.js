@@ -1,32 +1,18 @@
 import React from "react";
-import cmykHW from '../assets/cmyk_HWhite21.png';
+import Navbar from "./NavBar";
 
 const LandingPage = () => {
   return (
-    <div>
+    <>
+      <div className="landing">
+        <Navbar />
         <header>
-        <img src={cmykHW} id="cmyk" alt="The engineer with a cmyk filter." />
-        <h1>Heather White</h1>
-        <h3>
-          software engineer
-        </h3>
-      </header>
-    </div>
+          <h1 id="myName" >Heather White</h1>
+          <h3 id="sweTitle" >software engineer</h3>
+        </header>
+      </div>
+    </>
   );
 };
 
 export default LandingPage;
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={cmykHW} className="cmyk-photo" alt="The engineer with a cmyk filter." />
-//         <h1>Heather White</h1>
-//         <h3>
-//           software engineer
-//         </h3>
-//       </header>
-//     </div>
-//   );
-// }

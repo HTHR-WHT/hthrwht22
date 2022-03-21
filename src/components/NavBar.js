@@ -1,22 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import linkedInLogo from "../assets/icons8-linkedin-50.png";
+import githubLogo from "../assets/icons8-github-50.png";
 
 const Navbar = () => {
-    return (
-        <nav>
-            <div id="leftLinks">
-                {/* {redirect to my linkedIn on logo click} */}
-                <Link to="/resume">resume</Link>
-            </div>
-            <div id="centerLink">
-                <Link to="/home">HTHR-WHT</Link>
-            </div>
-            <div id="rightLinks">
-                <Link to="/portfolio">portfolio</Link>
-                {/* {redirect to my github on logo click} */}
-            </div>
-        </nav>
-    )
+  return (
+    <nav className="navLinks">
+      <div id="leftLinks">
+        <a
+          href="https://www.linkedin.com/in/heather-white-nyc/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            className="logoLinks"
+            src={linkedInLogo}
+            alt="Link to engineer's LinkedIn page."
+          />
+        </a>
+        <Link to="/resume" style={{ textDecoration: "none" }}>
+          resume
+        </Link>
+      </div>
+      <div id="centerLink">
+        <Link to="/home" style={{ textDecoration: "none" }}>
+          HTHR-WHT
+        </Link>
+      </div>
+      <div id="rightLinks">
+        <Link to="/portfolio" style={{ textDecoration: "none" }}>
+          portfolio
+        </Link>
+        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
+          <img
+            className="logoLinks"
+            src={githubLogo}
+            alt="Link to engineer's github page."
+          />
+        </a>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

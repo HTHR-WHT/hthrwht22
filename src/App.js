@@ -1,7 +1,6 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
@@ -10,9 +9,9 @@ const App = () => {
   return (
     <>
       <Router>
-      <Navbar />
         <Routes>
-          <Route exact path="/"  element={<LandingPage />} />
+          <Route exact path="/" element={<LandingPage />} />
+          <Route path="/home" element={<LandingPage />} />
           {/* <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} /> */}
         </Routes>

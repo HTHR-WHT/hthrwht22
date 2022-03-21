@@ -1,14 +1,109 @@
+/* html {
+  height: 100%;
+} */
+/*fonts in body og css
+/* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+*/
+/*og css...not sure I need it?
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} 
+*/
+
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
-  font-family: "Fredoka One", cursive;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Cabin', sans-serif, 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* .landing {
+  min-height: 100vh;
+  background: url("./assets/cmyk_HWhite21.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+} */
+/*
+***There is no background-opacity property in CSS, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.
+*/
+.landing::after {
+  content: "";
+  background: url("./assets/cmyk_HWhite21.png");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Raleway";
+  font-size: 36px;
+  text-shadow: 2px 2px 5px #C389B3;
+}
+
+.logoLinks {
+  height: 55px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+#leftLinks {
+  margin-top: 35px;
+  margin-left: 10px;
+  color: black;
+}
+
+#centerLink {
+  margin-top: 35px;
+  color: black;
+}
+
+#rightLinks {
+  margin-top: 35px;
+  margin-right: 10px;
+  color: black;
+}
+
+a:hover {
+  color: red;
+}
+
+/* a:active {
+  color: red;
+} */
+
+#myName {
+  font-family: "Raleway";
+  font-size: 72px;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 18%;
+  margin-bottom: 0px;
+  text-shadow: 2px 2px 5px #C389B3;
+}
+
+#sweTitle {
+  font-family: "Cabin";
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 20px;
+  margin-top: 0px;
+
 }
