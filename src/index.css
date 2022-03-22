@@ -12,6 +12,8 @@
     monospace;
 } 
 */
+
+/*RESPONSIVE BACKGROUNDS*/
 /*Avoid downloading background on smaller screen*/
 @media screen and (max-width: 480px) {
   html {
@@ -21,17 +23,17 @@
 /*Using media queries to select right sized background image to download*/
 @media screen and (max-width: 480px) {
   html {
-    background: url("./assets/mobile_HWhite21.png") no-repeat top center fixed;
+    background: url("./assets/mobile_landing.png") no-repeat top center fixed;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 900px) {
   html {
-    background: url("./assets/tablet_HWhite21.png") no-repeat top center fixed;
+    background: url("./assets/tablet_landing.png") no-repeat top center fixed;
   }
 }
 @media screen and (min-width: 901px) {
-  html {
-    background: url("./assets/desktop_HWhite21.png") no-repeat top center fixed;
+  html{
+    background: url("./assets/desktop_landing.png") no-repeat top center fixed;
   }
 }
 html {
@@ -51,16 +53,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .landing {
-  background-image: url("./assets/cmyk_HWhite21.png");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; 
-}  */
-
 /*NAV CSS*/
 .navLinks {
   display: flex;
@@ -68,7 +60,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: "Raleway";
-  font-size: 36px;
+  font-size: 24px;
   text-shadow: 2px 2px 5px #c389b3;
 }
 
@@ -111,10 +103,6 @@ a:hover {
   color: red;
 }
 
-/* a:active {
-  color: red;
-} */
-
 /*HOME PAGE TEXT CSS*/
 .landing-text {
   text-align: center;
@@ -142,33 +130,51 @@ a:hover {
 }
 
 /*PORTFOLIO PAGE CSS*/
-/* .projectContainer {
-
+/* .portfolio {
+  min-height: 100vh;
+  background-color: #f7def0;
+  opacity: 55%;
+} */
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+.projectContainer h1 {
+  margin-bottom: 0px;
+  font-family: "Raleway";
+  font-size: 36px;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 5px #c389b3;
 }
 .containerLeft {
-  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: black;
+}
+.containerLeft img {
+  width: 800px;
 }
 .containerRight {
-  
-} */
-/*RESPONSIVE BACKGROUNDS*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 10px;
+}
+.containerRight p {
+  margin: 1em;
+  font-size: 24px;
+  max-width: 750px;
+}
 
-/*background for large iphone viewport*/
-/*portrait*/
-/* @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-    html {
-      background-image: url("./assets/iphone-12Pro_HWhite21.png");
-      max-height: 100vh;
-    }
-} */
-/*background for small iphone (ex: se) viewport*/
-/*portrait*/
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  html {
-    background-image: url("./assets/seVH_HWhite21.png");
-  }
-} */
+.portfolioLogoLinks {
+  display: flex;
+  flex-direction: row;
+}
