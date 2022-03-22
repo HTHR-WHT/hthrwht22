@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 import Navbar from "./NavBar";
-import allProjects from "../seed/projects";
+import allProjects from "../projectData/projects.js";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(null);
@@ -34,7 +34,10 @@ const Portfolio = () => {
               </div>
               <div className="containerRight">
                 <p>{project.description}</p>
-                <p><b>Tech Stack:  </b>{project.tech}</p>
+                <p>
+                  <b>Tech Stack: </b>
+                  {project.tech}
+                </p>
                 <div className="portfolioLogoLinks">
                   <a
                     href={`https://github.com/${project.repo}`}
