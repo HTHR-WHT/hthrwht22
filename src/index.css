@@ -54,7 +54,7 @@ body {
 }
 
 /*NAV CSS*/
-.navLinks {
+nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -63,6 +63,15 @@ body {
   font-size: 24px;
   text-shadow: 2px 2px 5px #c389b3;
 }
+nav a {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+/* a:active {
+  color: hotpink;
+} */
 
 .logoLinks {
   height: 55px;
@@ -70,14 +79,13 @@ body {
   padding-left: 30px;
 }
 
-#leftLinks {
+.leftLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
   margin-left: 10px;
-  color: black;
 }
 
 #centerLink {
@@ -86,21 +94,15 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
-  color: black;
 }
 
-#rightLinks {
+.rightLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
   margin-right: 10px;
-  color: black;
-}
-
-a:hover {
-  color: red;
 }
 
 /*HOME PAGE TEXT CSS*/
@@ -141,7 +143,13 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em;
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+  width: 850px;
+  background-color: #cccccc80;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
 .projectContainer h1 {
   margin-bottom: 0px;
@@ -177,4 +185,5 @@ a:hover {
 .portfolioLogoLinks {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }

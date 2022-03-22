@@ -34,7 +34,7 @@ const Portfolio = () => {
               </div>
               <div className="containerRight">
                 <p>{project.description}</p>
-                <p>Tech Stack: {project.tech}</p>
+                <p><b>Tech Stack:  </b>{project.tech}</p>
                 <div className="portfolioLogoLinks">
                   <a
                     href={`https://github.com/${project.repo}`}
