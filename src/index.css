@@ -13,51 +13,65 @@
 } 
 */
 
+/*RESPONSIVE BACKGROUNDS*/
+/*Avoid downloading background on smaller screen*/
+@media screen and (max-width: 480px) {
+  html {
+    background: none;
+  }
+}
+/*Using media queries to select right sized background image to download*/
+@media screen and (max-width: 480px) {
+  html {
+    background: url("./assets/mobile_landing.png") no-repeat top center fixed;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  html {
+    background: url("./assets/tablet_landing.png") no-repeat top center fixed;
+  }
+}
+@media screen and (min-width: 901px) {
+  html{
+    background: url("./assets/desktop_landing.png") no-repeat top center fixed;
+  }
+}
+html {
+  background-size: cover;
+  background-color: #cccccc;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+}
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: 'Cabin', sans-serif, 'Raleway', sans-serif;
+  font-family: "Cabin", sans-serif, "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .landing {
-  min-height: 100vh;
-  background: url("./assets/cmyk_HWhite21.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #cccccc;
-} */
-/*
-***There is no background-opacity property in CSS, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.
-*/
-/*HOME PAGE BACKGROUND IMAGE*/
-.landing::after {
-  content: "";
-  background: url("./assets/cmyk_HWhite21.png");
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #cccccc;
-}
 /*NAV CSS*/
-.navLinks {
+nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-family: "Raleway";
-  font-size: 36px;
-  text-shadow: 2px 2px 5px #C389B3;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px #c389b3;
 }
+nav a {
+  color: black;
+}
+a:hover {
+  color: red;
+}
+/* a:active {
+  color: hotpink;
+} */
 
 .logoLinks {
   height: 55px;
@@ -65,14 +79,13 @@ body {
   padding-left: 30px;
 }
 
-#leftLinks {
+.leftLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
   margin-left: 10px;
-  color: black;
 }
 
 #centerLink {
@@ -81,53 +94,96 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
-  color: black;
 }
 
-#rightLinks {
+.rightLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
   margin-right: 10px;
-  color: black;
 }
 
-a:hover {
-  color: red;
+/*HOME PAGE TEXT CSS*/
+.landing-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-/* a:active {
-  color: red;
-} */
-
-/*HOME PAGE HEADER CSS*/
 #myName {
   font-family: "Raleway";
   font-size: 72px;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 5px;
-  margin-top: 18%;
-  margin-bottom: 0px;
-  text-shadow: 2px 2px 5px #C389B3;
+  /* margin-top: 18%;
+  margin-bottom: 0px; */
+  text-shadow: 2px 2px 5px #c389b3;
 }
 
 #sweTitle {
   font-family: "Cabin";
   font-size: 36px;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 20px;
-  margin-top: 0px;
+  /* margin-top: 0px; */
 }
 
 /*PORTFOLIO PAGE CSS*/
-/* .projectContainer {
-
+/* .portfolio {
+  min-height: 100vh;
+  background-color: #f7def0;
+  opacity: 55%;
+} */
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 25%;
+  margin-bottom: 5%;
+  width: 850px;
+  background-color: #cccccc80;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.projectContainer h1 {
+  margin-bottom: 0px;
+  font-family: "Raleway";
+  font-size: 36px;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 5px #c389b3;
 }
 .containerLeft {
-  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: black;
+}
+.containerLeft img {
+  width: 800px;
 }
 .containerRight {
-  
-} */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 10px;
+}
+.containerRight p {
+  margin: 1em;
+  font-size: 24px;
+  max-width: 750px;
+}
+
+.portfolioLogoLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
