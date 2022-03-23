@@ -30,8 +30,8 @@ const Navbar = () => {
             resume
           </Link>
         </div>
-        <div id="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+        <div className="centerLink">
+          <Link to="/home" activeStyle={{ textDecoration: "none", color: "red" }}>
             HTHR-WHT
           </Link>
         </div>
@@ -56,8 +56,8 @@ const Navbar = () => {
   }
   if (path === "/portfolio") {
     return (
-      <nav className="navLinks">
-        <div id="leftLinks">
+      <nav>
+        <div className="leftLinks">
           <a
             href="https://www.linkedin.com/in/heather-white-nyc/"
             target="_blank"
@@ -73,12 +73,12 @@ const Navbar = () => {
             resume
           </Link>
         </div>
-        <div id="centerLink">
+        <div className="centerLink">
           <Link to="/home" style={{ textDecoration: "none" }}>
             HTHR-WHT
           </Link>
         </div>
-        <div id="rightLinks">
+        <div className="rightLinks">
           <Link
             to="/portfolio"
             style={{ textDecoration: "none", color: "red" }}
@@ -102,8 +102,8 @@ const Navbar = () => {
   }
   if (path === "/resume") {
     return (
-      <nav className="navLinks">
-        <div id="leftLinks">
+      <nav>
+        <div className="leftLinks">
           <a
             href="https://www.linkedin.com/in/heather-white-nyc/"
             target="_blank"
@@ -115,16 +115,16 @@ const Navbar = () => {
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
+          <Link to="/resume" style={{ textDecoration: "none", color: "red" }}>
             resume
           </Link>
         </div>
-        <div id="centerLink">
+        <div className="centerLink">
           <Link to="/home" style={{ textDecoration: "none" }}>
             HTHR-WHT
           </Link>
         </div>
-        <div id="rightLinks">
+        <div className="rightLinks">
           <Link to="/portfolio" style={{ textDecoration: "none" }}>
             portfolio
           </Link>
