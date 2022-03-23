@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import Portfolio from "./components/Portfolio";
-// import Resume from "./components/Resume";
+import Resume from "./components/Resume";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
           <Route exact path="/" element={<LandingPage />} />
           <Route path="/home" element={<LandingPage />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          {/* <Route path="/resume" element={<Resume />} /> */}
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Router>
     </>
