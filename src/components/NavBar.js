@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import linkedInLogo from "../assets/icons8-linkedin-50.png";
 import githubLogo from "../assets/icons8-github-50.png";
 
@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setPath(location.pathname);
-  }, [location]);
+  }, [location.pathname]);
 
   if (path === "/home" || "/") {
     return (
@@ -26,19 +26,19 @@ const Navbar = () => {
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
+          <NavLink to="/resume" style={{ textDecoration: "none" }}>
             resume
-          </Link>
+          </NavLink>
         </div>
         <div id="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <NavLink to="/home" style={{ textDecoration: "none" }}>
             HTHR-WHT
-          </Link>
+          </NavLink>
         </div>
         <div className="rightLinks">
-          <Link to="/portfolio" style={{ textDecoration: "none" }}>
+          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
             portfolio
-          </Link>
+          </NavLink>
           <a
             href="https://github.com/HTHR-WHT"
             target="_blank"
@@ -69,22 +69,19 @@ const Navbar = () => {
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
+          <NavLink to="/resume" style={{ textDecoration: "none" }}>
             resume
-          </Link>
+          </NavLink>
         </div>
         <div id="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <NavLink to="/home" style={{ textDecoration: "none" }}>
             HTHR-WHT
-          </Link>
+          </NavLink>
         </div>
         <div id="rightLinks">
-          <Link
-            to="/portfolio"
-            style={{ textDecoration: "none", color: "red" }}
-          >
+          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
             portfolio
-          </Link>
+          </NavLink>
           <a
             href="https://github.com/HTHR-WHT"
             target="_blank"
@@ -115,19 +112,19 @@ const Navbar = () => {
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
+          <NavLink to="/resume" style={{ textDecoration: "none" }}>
             resume
-          </Link>
+          </NavLink>
         </div>
         <div id="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <NavLink to="/home" style={{ textDecoration: "none" }}>
             HTHR-WHT
-          </Link>
+          </NavLink>
         </div>
         <div id="rightLinks">
-          <Link to="/portfolio" style={{ textDecoration: "none" }}>
+          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
             portfolio
-          </Link>
+          </NavLink>
           <a
             href="https://github.com/HTHR-WHT"
             target="_blank"
