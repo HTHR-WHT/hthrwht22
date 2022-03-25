@@ -11,7 +11,7 @@ const Navbar = () => {
     setPath(location.pathname);
   }, [location]);
 
-  if (path === "/home" || "/") {
+  if (path === "/") {
     return (
       <nav>
         <div className="leftLinks">
@@ -31,7 +31,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             HTHR-WHT
           </Link>
         </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             HTHR-WHT
           </Link>
         </div>
@@ -120,7 +120,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="centerLink">
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             HTHR-WHT
           </Link>
         </div>

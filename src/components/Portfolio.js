@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import Navbar from "./NavBar";
-import allProjects from "../projectData/projects.js";
+import allProjects from "../data/projects.js";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(null);

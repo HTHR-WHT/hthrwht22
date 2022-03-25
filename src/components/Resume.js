@@ -8,7 +8,7 @@ download resume pdf link
 */
 import React from "react";
 import Navbar from "./NavBar";
-import {topSkills, medSkills, softSkills} from "../projectData/resumeSkills";
+import {topSkills, medSkills, softSkills} from "../data/resumeSkills";
 
 const Resume = () => {
     return (
