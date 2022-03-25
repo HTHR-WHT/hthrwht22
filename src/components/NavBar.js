@@ -36,7 +36,7 @@ const Navbar = () => {
   // useEffect(() => {
   //   setPath(location.pathname);
   // }, [location]);
-  const classes = useStyles();
+  const navClasses = useStyles();
 
   return (
     <nav>
@@ -46,10 +46,10 @@ const Navbar = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon className={classes.logo} />
+          <LinkedInIcon className={navClasses.logo} />
         </a>
         <Button
-          className={classes.btn}
+          className={navClasses.btn}
           variant="contained"
           color="secondary"
           href="/skills"
@@ -60,7 +60,7 @@ const Navbar = () => {
       </div>
       <div>
         <Button
-          className={classes.btn}
+          className={navClasses.btn}
           variant="contained"
           color="secondary"
           href="/"
@@ -71,7 +71,7 @@ const Navbar = () => {
       </div>
       <div>
         <Button
-          className={classes.btn}
+          className={navClasses.btn}
           variant="contained"
           color="secondary"
           href="/portfolio"
@@ -80,7 +80,7 @@ const Navbar = () => {
           portfolio
         </Button>
         <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
-          <GitHubIcon className={classes.logo} />
+          <GitHubIcon className={navClasses.logo} />
         </a>
       </div>
     </nav>

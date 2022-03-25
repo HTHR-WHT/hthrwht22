@@ -18,14 +18,14 @@ const Skills = () => {
           <Container>
             <Navbar />
             <div>
-              <Typography variant="h4">Technical Skills</Typography>
-              <Typography variant="h5">Proficient:</Typography>
+              <Typography variant="h5">Technical Skills</Typography>
+              <Typography variant="h6">Proficient:</Typography>
                 <ul>
                     {topSkills.map((skill, i) => 
                         <li key={i} >{skill}</li>
                     )}
                 </ul>
-                <Typography variant="h5">Knowledgeable:</Typography>
+                <Typography variant="h6">Knowledgeable:</Typography>
                 <ul>
                     {medSkills.map((skill, i) => 
                         <li key={i} >{skill}</li>
@@ -33,7 +33,7 @@ const Skills = () => {
                 </ul>
             </div >
             <div>
-            <Typography variant="h4">Transferrable Skills</Typography>
+            <Typography variant="h5">Transferrable Skills</Typography>
               <ul>
                 {softSkills.map((skill, i) => 
                     <li key={i} >{skill}</li>
