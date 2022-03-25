@@ -31,7 +31,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="centerLink">
-          <Link to="/home" activeStyle={{ textDecoration: "none", color: "red" }}>
+          <Link to="/home" style={{ textDecoration: "none" }}>
             HTHR-WHT
           </Link>
         </div>
@@ -115,7 +115,7 @@ const Navbar = () => {
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/resume" style={{ textDecoration: "none", color: "red" }}>
+          <Link to="/resume" style={{ textDecoration: "none" }}>
             resume
           </Link>
         </div>
