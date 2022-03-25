@@ -8,6 +8,7 @@ import githubLogo from "../assets/icons8-github-50.png";
 import youtubeLogo from "../assets/icons8-youtube-50.png";
 import herokuLogo from "../assets/icons8-heroku-50.png";
 
+
 const projects = [
   {
     name: "City Diary",
