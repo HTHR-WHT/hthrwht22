@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography"
 import Navbar from "../components/NavBar";
 import allProjects from "../data/projects.js";
@@ -13,15 +14,15 @@ const Portfolio = () => {
   if (projects === [] || projects === null) {
     return (
       <>
-        <div>
+        <Container>
           <Typography>hang tight...fetching projects</Typography>
-        </div>
+        </Container>
       </>
     );
   } else {
     return (
       <>
-        <div>
+        <Container>
           <Navbar />
           {projects.map((project) => (
             <div key={project.name}>
@@ -50,7 +51,7 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Container>
       </>
     );
   }

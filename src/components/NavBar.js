@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import Button from "@material-ui/core/Button";
 import { Link, useLocation } from "react-router-dom";
 import linkedInLogo from "../assets/icons8-linkedin-50.png";
 import githubLogo from "../assets/icons8-github-50.png";
@@ -24,19 +25,19 @@ const Navbar = () => {
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/skills">
+          <Button variant="outlined" color="secondary" href="/skills">
             skills
-          </Link>
+          </Button>
         </div>
         <div>
-          <Link to="/">
+          <Button variant="outlined" color="secondary" href="/">
             HTHR-WHT
-          </Link>
+          </Button>
         </div>
         <div>
-          <Link to="/portfolio">
+          <Button variant="outlined" color="secondary" href="/portfolio">
             portfolio
-          </Link>
+          </Button>
           <a
             href="https://github.com/HTHR-WHT"
             target="_blank"

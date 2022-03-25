@@ -7,6 +7,7 @@ image of resume
 download resume pdf link
 */
 import React from "react";
+import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography"
 import Navbar from "../components/NavBar";
 import {topSkills, medSkills, softSkills} from "../data/resumeSkills";
@@ -14,7 +15,7 @@ import {topSkills, medSkills, softSkills} from "../data/resumeSkills";
 const Skills = () => {
     return (
         <>
-          <div>
+          <Container>
             <Navbar />
             <div>
               <Typography variant="h4">Technical Skills</Typography>
@@ -39,7 +40,7 @@ const Skills = () => {
                 )}
               </ul>
             </div >
-          </div>
+          </Container>
         </>
       );
   
