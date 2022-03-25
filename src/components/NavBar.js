@@ -11,32 +11,30 @@ const Navbar = () => {
     setPath(location.pathname);
   }, [location]);
 
-  if (path === "/") {
     return (
       <nav>
-        <div className="leftLinks">
+        <div>
           <a
             href="https://www.linkedin.com/in/heather-white-nyc/"
             target="_blank"
             rel="noreferrer"
           >
             <img
-              className="logoLinks"
               src={linkedInLogo}
               alt="Link to engineer's LinkedIn page."
             />
           </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
-            resume
+          <Link to="/skills">
+            skills
           </Link>
         </div>
-        <div className="centerLink">
-          <Link to="/" style={{ textDecoration: "none" }}>
+        <div>
+          <Link to="/">
             HTHR-WHT
           </Link>
         </div>
-        <div className="rightLinks">
-          <Link to="/portfolio" style={{ textDecoration: "none" }}>
+        <div>
+          <Link to="/portfolio">
             portfolio
           </Link>
           <a
@@ -45,7 +43,6 @@ const Navbar = () => {
             rel="noreferrer"
           >
             <img
-              className="logoLinks"
               src={githubLogo}
               alt="Link to engineer's github page."
             />
@@ -53,96 +50,6 @@ const Navbar = () => {
         </div>
       </nav>
     );
-  }
-  if (path === "/portfolio") {
-    return (
-      <nav>
-        <div className="leftLinks">
-          <a
-            href="https://www.linkedin.com/in/heather-white-nyc/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={linkedInLogo}
-              alt="Link to engineer's LinkedIn page."
-            />
-          </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
-            resume
-          </Link>
-        </div>
-        <div className="centerLink">
-          <Link to="/" style={{ textDecoration: "none" }}>
-            HTHR-WHT
-          </Link>
-        </div>
-        <div className="rightLinks">
-          <Link
-            to="/portfolio"
-            style={{ textDecoration: "none", color: "red" }}
-          >
-            portfolio
-          </Link>
-          <a
-            href="https://github.com/HTHR-WHT"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={githubLogo}
-              alt="Link to engineer's github page."
-            />
-          </a>
-        </div>
-      </nav>
-    );
-  }
-  if (path === "/resume") {
-    return (
-      <nav>
-        <div className="leftLinks">
-          <a
-            href="https://www.linkedin.com/in/heather-white-nyc/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={linkedInLogo}
-              alt="Link to engineer's LinkedIn page."
-            />
-          </a>
-          <Link to="/resume" style={{ textDecoration: "none" }}>
-            resume
-          </Link>
-        </div>
-        <div className="centerLink">
-          <Link to="/" style={{ textDecoration: "none" }}>
-            HTHR-WHT
-          </Link>
-        </div>
-        <div className="rightLinks">
-          <Link to="/portfolio" style={{ textDecoration: "none" }}>
-            portfolio
-          </Link>
-          <a
-            href="https://github.com/HTHR-WHT"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={githubLogo}
-              alt="Link to engineer's github page."
-            />
-          </a>
-        </div>
-      </nav>
-    );
-  }
 };
 
 export default Navbar;

@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
-import Navbar from "./NavBar";
+import Typography from "@material-ui/core/Typography"
+import Navbar from "../components/NavBar";
 import allProjects from "../data/projects.js";
 
 const Portfolio = () => {
@@ -12,32 +13,29 @@ const Portfolio = () => {
   if (projects === [] || projects === null) {
     return (
       <>
-        <div className="portfolio">
-          <p>hang tight...fetching projects</p>
+        <div>
+          <Typography>hang tight...fetching projects</Typography>
         </div>
       </>
     );
   } else {
     return (
       <>
-        <div className="portfolio">
+        <div>
           <Navbar />
           {projects.map((project) => (
-            <div className="projectContainer" key={project.name}>
-              <h1>{project.name}</h1>
-              <div className="containerLeft">
+            <div key={project.name}>
+              <Typography variant="h4">{project.name}</Typography>
+              <div>
                 <img
                   src={`${project.image}`}
                   alt={`Screen capture of ${project.name}`}
                 />
               </div>
-              <div className="containerRight">
-                <p>{project.description}</p>
-                <p>
-                  <b>Tech Stack: </b>
-                  {project.tech}
-                </p>
-                <div className="portfolioLogoLinks">
+              <div>
+                <Typography>{project.description}</Typography>
+                <Typography>Tech Stack: {project.tech}</Typography>
+                <div>
                   <a
                     href={`https://github.com/${project.repo}`}
                     target="_blank"

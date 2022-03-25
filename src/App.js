@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
-import Portfolio from "./components/Portfolio";
-import Resume from "./components/Resume";
+import Home from "./views/Home";
+import Portfolio from "./views/Portfolio";
+import Skills from "./views/Skills";
 
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/skills" element={<Skills />} />
         </Routes>
       </Router>
     </>
