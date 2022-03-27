@@ -4,23 +4,25 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Home from "./views/Home";
 import Portfolio from "./views/Portfolio";
 import Skills from "./views/Skills";
+import Layout from "./components/Layout";
 
 /* MUI THEME */
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#ee82ee",
+      main: "#dcd5c9",
     },
   },
   typography: {
     fontFamily: "Raleway",
     h1: {
       fontFamily: "Raleway",
-      letterSpacing: 5,
+      fontWeight: 500,
+      letterSpacing: "1rem",
     },
     h4: {
       fontFamily: "Cabin",
-      letterSpacing: 20,
+      letterSpacing: "1.5rem",
     },
     body1: {
       fontFamily: "Cabin",
@@ -37,11 +39,13 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <Router>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/skills" element={<Skills />} />
-          </Routes>
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/skills" element={<Skills />} />
+            </Routes>
+          </Layout>
         </Router>
       </ThemeProvider>
     </>

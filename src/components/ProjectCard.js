@@ -5,20 +5,23 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import { Typography } from "@mui/material";
 import { IconButton } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const ProjectCard = ({ project }) => {
-    let navigate = useNavigate();
   return (
     <div>
       <Card elevation={3}>
         <CardHeader
           action={
-              //this navigate thing aint workin...le sigh
-              <IconButton onClick={() => navigate(`https://github.com/${project.repo}`)}>
-                <GitHubIcon />
+            <a
+              href={`https://github.com/${project.repo}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <IconButton>
+                <GitHubIcon fontSize="large" />
               </IconButton>
+            </a>
           }
           title={project.name}
           subheader={project.type}

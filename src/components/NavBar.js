@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@mui/material/Button";
-// import { useLocation } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -9,33 +8,29 @@ import LogoDevIcon from "@mui/icons-material/LogoDev";
 import HomeIcon from "@mui/icons-material/Home";
 
 /* MUI styles */
-const useStyles = makeStyles({
-  btn: {
-    fontSize: 14,
-    backgroundColor: "black",
-    "&:hover": {
-      backgroundColor: "violet",
+const useStyles = makeStyles(() => {
+  return {
+    btn: {
+      fontSize: "1rem",
+      backgroundColor: "black",
+      "&:hover": {
+        backgroundColor: "violet",
+      },
+      marginBottom: "1rem",
+      fontFamily: "Raleway",
     },
-    marginBottom: 20,
-    fontFamily: "Raleway",
-  },
-  logo: {
-    fontSize: 48,
-    color: "black",
-    "&:hover": {
-      color: "violet",
+    logo: {
+      fontSize: "3rem",
+      color: "black",
+      "&:hover": {
+        color: "violet",
+      },
     },
-  },
+  };
 });
 
 /* COMPONENT */
 const Navbar = () => {
-  // const [path, setPath] = useState("");
-  // const location = useLocation();
-
-  // useEffect(() => {
-  //   setPath(location.pathname);
-  // }, [location]);
   const navClasses = useStyles();
 
   return (
@@ -51,7 +46,6 @@ const Navbar = () => {
         <Button
           className={navClasses.btn}
           variant="contained"
-          color="secondary"
           href="/skills"
           startIcon={<LogoDevIcon />}
         >
@@ -62,7 +56,6 @@ const Navbar = () => {
         <Button
           className={navClasses.btn}
           variant="contained"
-          color="secondary"
           href="/"
           startIcon={<HomeIcon />}
         >
@@ -73,7 +66,6 @@ const Navbar = () => {
         <Button
           className={navClasses.btn}
           variant="contained"
-          color="secondary"
           href="/portfolio"
           startIcon={<CodeIcon />}
         >
