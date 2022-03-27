@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => {
 });
 
 const Skills = () => {
-  const skillClass = useStyles();
+  const classes = useStyles();
   return (
     <>
       <Container>
-        <div className={skillClass.toolbar}></div>
+        <div className={classes.toolbar}></div>
         <div>
           <Typography variant="h5">Technical Skills</Typography>
           <Typography variant="h6">Proficient:</Typography>

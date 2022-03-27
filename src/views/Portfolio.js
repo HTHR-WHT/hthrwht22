@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => {
 
 /* COMPONENT */
 const Portfolio = () => {
-  const portClasses = useStyles();
+  const classes = useStyles();
   const [projects, setProjects] = useState(null);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Portfolio = () => {
     return (
       <>
         <Container>
-        <div className={portClasses.toolbar}></div>
+        <div className={classes.toolbar}></div>
 
           <Grid container spacing={3}>
             {projects.map((project) => (

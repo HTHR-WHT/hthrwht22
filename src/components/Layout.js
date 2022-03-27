@@ -6,31 +6,26 @@ import NavBar from "./NavBar";
 
 const useStyles = makeStyles((theme) => {
   return {
-    root: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-evenly",
-    },
-    view: {
+    page: {
       background: "#f9f9f9",
-      width: "100%",
-      minHeight: "100vh",
+        width: "100%",
+        minHeight: "100vh",
     },
     toolbar: theme.mixins.toolbar,
   };
 });
 
 const Layout = ({ children }) => {
-  const layoutClass = useStyles();
+  const classes = useStyles();
   return (
     <div>
       <AppBar elevation={0}>
-        <ToolBar className={layoutClass.root}>
+        <ToolBar>
           <NavBar />
         </ToolBar>
       </AppBar>
-      <div className={layoutClass.view}>
-        <div className={layoutClass.toolbar}></div>
+      <div className={classes.page}>
+        <div className={classes.toolbar}></div>
         {children}
       </div>
     </div>

@@ -7,10 +7,13 @@ import Skills from "./views/Skills";
 import Layout from "./components/Layout";
 
 /* MUI THEME */
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
-      main: "#dcd5c9",
+      main: "#dcd5d9",
+    },
+    secondary: {
+      main: "#ee82ee",
     },
   },
   typography: {

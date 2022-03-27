@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
 
 /* COMPONENT */
 const Home = () => {
-  const homeClass = useStyles();
+  const classes = useStyles();
 
   return (
     <div>
       <CssBaseline />
       <Container>
-        <div className={homeClass.text}>
+        <div className={classes.text}>
           <Typography variant="h1" align="center" gutterBottom>
             Heather White
           </Typography>

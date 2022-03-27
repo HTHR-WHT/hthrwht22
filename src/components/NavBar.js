@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { makeStyles } from "@mui/styles";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -8,74 +9,69 @@ import LogoDevIcon from "@mui/icons-material/LogoDev";
 import HomeIcon from "@mui/icons-material/Home";
 
 /* MUI styles */
-const useStyles = makeStyles(() => {
-  return {
-    btn: {
-      fontSize: "1rem",
-      backgroundColor: "black",
-      "&:hover": {
-        backgroundColor: "violet",
-      },
-      marginBottom: "1rem",
-      fontFamily: "Raleway",
+const useStyles = makeStyles((theme) => ({
+  navbar: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  logo: {
+    color: "black",
+    "&:hover": {
+      color: theme.palette.secondary.main,
     },
-    logo: {
-      fontSize: "3rem",
-      color: "black",
-      "&:hover": {
-        color: "violet",
-      },
-    },
-  };
-});
+  },
+}));
+/* custom nav button styles */
+const ColorButton = styled(Button)(({ theme }) => ({
+  color: theme.palette.getContrastText("#000"),
+  backgroundColor: "#000",
+  "&:hover": {
+    backgroundColor: theme.palette.secondary.main,
+  },
+}));
 
 /* COMPONENT */
 const Navbar = () => {
-  const navClasses = useStyles();
+  const classes = useStyles();
 
   return (
-    <nav>
+    <div className={classes.navbar}>
       <div>
         <a
           href="https://www.linkedin.com/in/heather-white-nyc/"
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon className={navClasses.logo} />
+          <LinkedInIcon className={classes.logo} />
         </a>
-        <Button
-          className={navClasses.btn}
+        <ColorButton
           variant="contained"
           href="/skills"
           startIcon={<LogoDevIcon />}
         >
           skills
-        </Button>
+        </ColorButton>
       </div>
       <div>
-        <Button
-          className={navClasses.btn}
-          variant="contained"
-          href="/"
-          startIcon={<HomeIcon />}
-        >
+        <ColorButton variant="contained" href="/" startIcon={<HomeIcon />}>
           HTHR-WHT
-        </Button>
+        </ColorButton>
       </div>
       <div>
-        <Button
-          className={navClasses.btn}
+        <ColorButton
           variant="contained"
           href="/portfolio"
           startIcon={<CodeIcon />}
         >
           portfolio
-        </Button>
+        </ColorButton>
         <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
-          <GitHubIcon className={navClasses.logo} />
+          <GitHubIcon className={classes.logo} />
         </a>
       </div>
-    </nav>
+    </div>
   );
 };
 
