@@ -14,7 +14,19 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "100%",
     flexDirection: "row",
-    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  pages: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+  },
+  logoContainer: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "flex-end",
   },
   logo: {
     color: "black",
@@ -25,10 +37,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 /* custom nav button styles */
 const ColorButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.getContrastText("#000"),
-  backgroundColor: "#000",
+  color: "#000",
   "&:hover": {
-    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.main,
   },
 }));
 
@@ -38,37 +49,42 @@ const Navbar = () => {
 
   return (
     <div className={classes.navbar}>
-      <div>
+      <div className={classes.pages}>
+        <div>
+          <ColorButton variant="text" href="/" startIcon={<HomeIcon />}>
+            HTHR-WHT
+          </ColorButton>
+        </div>
+        <div>
+          <ColorButton
+            variant="text"
+            href="/skills"
+            startIcon={<LogoDevIcon />}
+          >
+            skills
+          </ColorButton>
+        </div>
+
+        <div>
+          <ColorButton
+            variant="text"
+            href="/portfolio"
+            startIcon={<CodeIcon />}
+          >
+            portfolio
+          </ColorButton>
+        </div>
+      </div>
+      <div className={classes.logoContainer}>
+        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
+          <GitHubIcon className={classes.logo} fontSize="large" />
+        </a>
         <a
           href="https://www.linkedin.com/in/heather-white-nyc/"
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon className={classes.logo} />
-        </a>
-        <ColorButton
-          variant="contained"
-          href="/skills"
-          startIcon={<LogoDevIcon />}
-        >
-          skills
-        </ColorButton>
-      </div>
-      <div>
-        <ColorButton variant="contained" href="/" startIcon={<HomeIcon />}>
-          HTHR-WHT
-        </ColorButton>
-      </div>
-      <div>
-        <ColorButton
-          variant="contained"
-          href="/portfolio"
-          startIcon={<CodeIcon />}
-        >
-          portfolio
-        </ColorButton>
-        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
-          <GitHubIcon className={classes.logo} />
+          <LinkedInIcon className={classes.logo} fontSize="large" />
         </a>
       </div>
     </div>
