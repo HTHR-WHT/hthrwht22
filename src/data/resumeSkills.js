@@ -18,6 +18,7 @@ export const topSkills = [
 ];
 
 export const medSkills = [
+  "Material UI",
   "Firebase",
   "bcrypt",
   "Heroku",
@@ -36,4 +37,3 @@ export const softSkills = [
   "Creative problem solving",
   "Attention to detail",
 ];
-

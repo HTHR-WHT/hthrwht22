@@ -11,18 +11,26 @@ import Container from "@mui/material/Container";
 import { makeStyles } from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import { topSkills, medSkills, softSkills } from "../data/resumeSkills";
+import skillLg from "../assets/desktop_portfolio.png";
 
 /* MUI styles */
-const useStyles = makeStyles((theme) => {
-  return {
-    toolbar: theme.mixins.toolbar,
-  };
-});
+const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.up("xs")]: {
+      minHeight: "100vh",
+      backgroundImage: `url(${skillLg})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    },
+    marginTop: "-4.2rem",
+  },
+  toolbar: theme.mixins.toolbar,
+}));
 
 const Skills = () => {
   const classes = useStyles();
   return (
-    <>
+    <div className={classes.root}>
       <Container>
         <div className={classes.toolbar}></div>
         <div>
@@ -49,7 +57,7 @@ const Skills = () => {
           </ul>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 

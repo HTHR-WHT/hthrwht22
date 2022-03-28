@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   name: {
     textShadow: "1px 1px 3px violet",
-  }
+  },
 }));
 
 /* COMPONENT */
@@ -49,7 +49,13 @@ const Home = () => {
       <CssBaseline />
       <Container>
         <div className={classes.text}>
-          <Typography className={classes.name} mt={"22rem"} variant="h1" align="center" gutterBottom>
+          <Typography
+            className={classes.name}
+            mt={"22rem"}
+            variant="h1"
+            align="center"
+            gutterBottom
+          >
             Heather White
           </Typography>
           <Typography variant="h4" align="center" gutterBottom>
