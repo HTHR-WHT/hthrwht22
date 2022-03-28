@@ -57,7 +57,11 @@ const Navbar = () => {
     <div className={classes.navbar}>
       <div className={classes.pages}>
         <div>
-          <ColorButton variant="text" href="/" startIcon={<HomeIcon />}>
+          <ColorButton
+            variant="text"
+            href="/"
+            startIcon={<HomeIcon aria-label="home link" />}
+          >
             HTHR-WHT
           </ColorButton>
         </div>
@@ -65,7 +69,7 @@ const Navbar = () => {
           <ColorButton
             variant="text"
             href="/skills"
-            startIcon={<LogoDevIcon />}
+            startIcon={<LogoDevIcon aria-label="tech skills link" />}
           >
             skills
           </ColorButton>
@@ -75,7 +79,7 @@ const Navbar = () => {
           <ColorButton
             variant="text"
             href="/portfolio"
-            startIcon={<CodeIcon />}
+            startIcon={<CodeIcon aria-label="portfolio link" />}
           >
             portfolio
           </ColorButton>
@@ -87,10 +91,18 @@ const Navbar = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon className={classes.logo} fontSize="large" />
+          <LinkedInIcon
+            className={classes.logo}
+            fontSize="large"
+            aria-label="linked in link"
+          />
         </a>
         <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
-          <GitHubIcon className={classes.logo} fontSize="large" />
+          <GitHubIcon
+            className={classes.logo}
+            fontSize="large"
+            aria-label="github repo link"
+          />
         </a>
       </div>
     </div>

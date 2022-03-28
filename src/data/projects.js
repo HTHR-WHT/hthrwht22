@@ -4,9 +4,9 @@ seed file for project info...
 import cdImg from "../assets/cd_screen.png";
 import hotSauceImg from "../assets/hotsauce_screen.png";
 import starballImg from "../assets/starball_screen.png";
-import githubLogo from "../assets/icons8-github-50.png";
-import youtubeLogo from "../assets/icons8-youtube-50.png";
-import herokuLogo from "../assets/icons8-heroku-50.png";
+import github from "../assets/icons8-github-50.png";
+// import youtube from "../assets/icons8-youtube-50.png";
+// import heroku from "../assets/icons8-heroku-50.png";
 
 const projects = [
   {
@@ -17,9 +17,9 @@ const projects = [
     tech: "React Native, Expo, Firebase",
     work: "Set up Firebase connection and initialized app structure including sign up/login, rendering maps and navigation, styled app views, set up GitHub Project Board, readme.md, wiki documentation.",
     image: cdImg,
-    github: githubLogo,
+    github: github,
     repo: "HCJM/City-Diary",
-    link: youtubeLogo,
+    link: "youtube",
     path: "https://tinyurl.com/cityDiaryDemo",
   },
   {
@@ -30,9 +30,9 @@ const projects = [
     tech: "Node.js, JavaScript, React, Redux, Axios, Express, pg, Sequelize, PostgreSQL, Heroku",
     work: "Pair programmed design schema, database models, 'all products' view and cart functionality.  Created redux store for Admin, secure CRUD routes, and initial checkout view.",
     image: hotSauceImg,
-    github: githubLogo,
+    github: github,
     repo: "HotnSaucy/HotSauces",
-    link: herokuLogo,
+    link: "heroku",
     path: "https://hotnsaucy.herokuapp.com/",
   },
   {
@@ -43,9 +43,9 @@ const projects = [
     tech: "JavaScript, p5.js, p5 play library",
     work: "Solo developer",
     image: starballImg,
-    github: githubLogo,
+    github: github,
     repo: "HTHR-WHT/p5-StarBall",
-    link: youtubeLogo,
+    link: "youtube",
     path: "https://youtu.be/OggzhuV33VI",
   },
 ];

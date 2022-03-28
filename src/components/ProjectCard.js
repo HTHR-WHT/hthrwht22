@@ -6,11 +6,13 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
+import Link from "@mui/material/Link";
 import { Typography } from "@mui/material";
 import { IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import OpenInBrowserIcon from "@mui/icons-material/OpenInBrowser";
 
 /* expand card helper function! thanks MUI docs :) */
 const ExpandMore = styled((props) => {
@@ -42,7 +44,7 @@ const ProjectCard = ({ project }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <IconButton>
+              <IconButton aria-label="github repo link">
                 <GitHubIcon fontSize="large" />
               </IconButton>
             </a>
@@ -60,6 +62,17 @@ const ProjectCard = ({ project }) => {
           <Typography variant="body1">{project.description}</Typography>
         </CardContent>
         <CardActions disableSpacing>
+          <IconButton aria-label="project demo link">
+            {`${project.link}` === "youtube" ? (
+              <Link href={project.path} target="_blank">
+                <YouTubeIcon fontSize="large" color="action" />
+              </Link>
+            ) : (
+              <Link href={project.path} target="_blank">
+                <OpenInBrowserIcon fontSize="large" color="action" />
+              </Link>
+            )}
+          </IconButton>
           <ExpandMore
             expand={expanded}
             onClick={handleExpand}
@@ -71,9 +84,9 @@ const ProjectCard = ({ project }) => {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Tech Stack:</Typography>
+            <Typography variant="h6">Tech Stack:</Typography>
             <Typography paragraph>{project.tech}</Typography>
-            <Typography paragraph>Contributions:</Typography>
+            <Typography variant="h6">Contributions:</Typography>
             <Typography paragraph>{project.work}</Typography>
           </CardContent>
         </Collapse>
