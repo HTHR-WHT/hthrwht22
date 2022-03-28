@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexDirection: "row",
     justifyContent: "flex-start",
+    alignItems: "center",
+    flexBasis: "auto",
   },
   logoContainer: {
     display: "flex",
@@ -76,15 +78,15 @@ const Navbar = () => {
         </div>
       </div>
       <div className={classes.logoContainer}>
-        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
-          <GitHubIcon className={classes.logo} fontSize="large" />
-        </a>
         <a
           href="https://www.linkedin.com/in/heather-white-nyc/"
           target="_blank"
           rel="noreferrer"
         >
           <LinkedInIcon className={classes.logo} fontSize="large" />
+        </a>
+        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
+          <GitHubIcon className={classes.logo} fontSize="large" />
         </a>
       </div>
     </div>

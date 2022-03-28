@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => {
   return {
     page: {
       background: "#f9f9f9",
-        width: "100%",
-        minHeight: "100vh",
+      width: "100%",
+      minHeight: "100vh",
     },
     toolbar: theme.mixins.toolbar,
   };
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   const classes = useStyles();
   return (
     <div>
-      <AppBar elevation={0}>
+      <AppBar sx={{ bgcolor: '#f9f9f930' }} elevation={0}>
         <ToolBar>
           <NavBar />
         </ToolBar>
