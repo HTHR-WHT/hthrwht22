@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   const classes = useStyles();
   return (
     <div>
-      <AppBar sx={{ bgcolor: '#f9f9f930' }} elevation={0}>
+      <AppBar sx={{ bgcolor: "#f9f9f900", mt: "1.1rem" }} elevation={1}>
         <ToolBar>
           <NavBar />
         </ToolBar>

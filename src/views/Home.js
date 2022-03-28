@@ -30,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    marginTop: "25%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
 }));
 
@@ -39,11 +41,11 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <CssBaseline />
       <Container>
         <div className={classes.text}>
-          <Typography variant="h1" align="center" gutterBottom>
+          <Typography mt={"22rem"} variant="h1" align="center" gutterBottom>
             Heather White
           </Typography>
           <Typography variant="h4" align="center" gutterBottom>
