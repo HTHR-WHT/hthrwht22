@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     flexDirection: "row",
     alignItems: "center",
+    backgroundColor: "#F5F5F530",
   },
   pages: {
     display: "flex",
@@ -23,12 +24,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
     alignItems: "center",
     flexBasis: "auto",
+    marginLeft: "1.75rem",
   },
   logoContainer: {
     display: "flex",
     width: "100%",
     flexDirection: "row",
     justifyContent: "flex-end",
+    marginTop: "1.5rem",
+    marginRight: "2rem",
   },
   logo: {
     color: "black",

@@ -13,7 +13,7 @@ export const theme = createTheme({
       main: "#dcd5d9",
     },
     secondary: {
-      main: "#ee82ee",
+      main: "#7b68ee",
     },
   },
   typography: {
