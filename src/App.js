@@ -34,6 +34,11 @@ export const theme = createTheme({
       fontFamily: "Cabin",
     },
   },
+  mixins: {
+    toolbar: {
+      minHeight: "7rem"
+    }
+  }
 });
 
 /* COMPONENT */
