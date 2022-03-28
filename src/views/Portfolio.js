@@ -11,7 +11,7 @@ import portLg from "../assets/desktop_portfolio.png";
 /* MUI styles */
 const useStyles = makeStyles((theme) => ({
   root: {
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("xs")]: {
       minHeight: "100vh",
       backgroundImage: `url(${portLg})`,
       backgroundRepeat: "no-repeat",

@@ -84,9 +84,11 @@ const ProjectCard = ({ project }) => {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography variant="h6">Tech Stack:</Typography>
+            <Typography sx={{ fontWeight: "bold" }}>Tech Stack:</Typography>
             <Typography paragraph>{project.tech}</Typography>
-            <Typography variant="h6">Contributions:</Typography>
+            <Typography sx={{ fontWeight: "bold" }}>
+              Contributions:
+            </Typography>
             <Typography paragraph>{project.work}</Typography>
           </CardContent>
         </Collapse>

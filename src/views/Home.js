@@ -3,9 +3,9 @@ import { makeStyles } from "@mui/styles";
 import { CssBaseline } from "@mui/material";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import homeLg from "../assets/desktop_landing.png";
-import homeMd from "../assets/tablet_landing.png";
-import homeSm from "../assets/mobile_landing.png";
+import homeLg from "../assets/desktop_home_50opac.png";
+import homeMd from "../assets/tablet_home_50opac.png";
+import homeSm from "../assets/mobile_home_50opac.png";
 
 /* MUI styles */
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
+  name: {
+    textShadow: "1px 1px 3px violet",
+  }
 }));
 
 /* COMPONENT */
@@ -46,7 +49,7 @@ const Home = () => {
       <CssBaseline />
       <Container>
         <div className={classes.text}>
-          <Typography mt={"22rem"} variant="h1" align="center" gutterBottom>
+          <Typography className={classes.name} mt={"22rem"} variant="h1" align="center" gutterBottom>
             Heather White
           </Typography>
           <Typography variant="h4" align="center" gutterBottom>
