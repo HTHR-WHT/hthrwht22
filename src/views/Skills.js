@@ -1,16 +1,18 @@
 /*
-create a container for background image
-nav component
 containers for tech skills, transferrable skills, my key vals, my interests/loves
-gray portrait
-image of resume
 download resume pdf link
 */
 import React from "react";
-import Container from "@mui/material/Container";
 import { makeStyles } from "@mui/styles";
-import Typography from "@mui/material/Typography";
-import { topSkills, medSkills, softSkills } from "../data/resumeSkills";
+import Container from "@mui/material/Container";
+import { Paper, Divider } from "@mui/material";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import TerminalIcon from "@mui/icons-material/Terminal";
+import ColorLensIcon from "@mui/icons-material/ColorLens";
+import GroupsIcon from "@mui/icons-material/Groups";
 import skillLg from "../assets/desktop_portfolio.png";
 
 /* MUI styles */
@@ -25,37 +27,68 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-4.2rem",
   },
   toolbar: theme.mixins.toolbar,
+  paper: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    minHeight: "80vh",
+  },
+  list: {
+    display: "flex",
+    justifyContent: "space-evenly"
+  },
+  listHeader: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  listItem: {
+    flexDirection: "column",
+    alignContent: "center",
+  },
 }));
 
 const Skills = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Container>
+      <Container maxWidth="lg">
         <div className={classes.toolbar}></div>
-        <div>
-          <Typography variant="h5">Technical Skills</Typography>
-          <Typography variant="h6">Proficient:</Typography>
-          <ul>
-            {topSkills.map((skill, i) => (
-              <li key={i}>{skill}</li>
-            ))}
-          </ul>
-          <Typography variant="h6">Knowledgeable:</Typography>
-          <ul>
-            {medSkills.map((skill, i) => (
-              <li key={i}>{skill}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <Typography variant="h5">Transferrable Skills</Typography>
-          <ul>
-            {softSkills.map((skill, i) => (
-              <li key={i}>{skill}</li>
-            ))}
-          </ul>
-        </div>
+        <Paper className={classes.paper} elevation={3}>
+          <List className={classes.list}>
+            <div aria-label="creative skills list">
+              <ListItem className={classes.listHeader}>
+                <ListItemIcon aria-label="palette icon">
+                  <ColorLensIcon fontSize="large" sx={{ color: "black" }} />
+                </ListItemIcon>
+                <ListItemText primary="CREATIVE" />
+              </ListItem>
+            </div>
+
+            <Divider orientation="vertical" flexItem variant="middle" />
+            <div aria-label="technical skills list">
+              <ListItem className={classes.listHeader}>
+                <ListItemIcon aria-label="terminal icon">
+                  <TerminalIcon fontSize="large" sx={{ color: "black" }} />
+                </ListItemIcon>
+                <ListItemText primary="TECHNICAL" />
+              </ListItem>
+            </div>
+
+            <Divider orientation="vertical" flexItem variant="middle" />
+            <div aria-label="professional skills list">
+              <ListItem className={classes.listHeader}>
+                <ListItemIcon aria-label="groups icon">
+                  <GroupsIcon fontSize="large" sx={{ color: "black" }} />
+                </ListItemIcon>
+                <ListItemText primary="PROFESSIONAL" />
+              </ListItem>
+            </div>
+          </List>
+          {/* <Typography variant="h5">Creative</Typography>
+          <Divider orientation="vertical" flexItem="true" variant="middle" />
+          <Typography variant="h5">Technical</Typography>
+          <Divider orientation="vertical" flexItem="true" variant="middle" />
+          <Typography variant="h5">Professional</Typography> */}
+        </Paper>
       </Container>
     </div>
   );
