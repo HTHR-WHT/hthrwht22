@@ -14,24 +14,24 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "100%",
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "#F5F5F530",
   },
   pages: {
     display: "flex",
-    width: "100%",
+    width: "400px",
     flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center",
+    justifyContent: "space-around",
     flexBasis: "auto",
-    marginLeft: "1.75rem",
+    marginLeft: "1.5rem",
   },
   logoContainer: {
     display: "flex",
-    width: "100%",
+    width: "100px",
     flexDirection: "row",
-    justifyContent: "flex-end",
-    marginTop: "1.5rem",
+    justifyContent: "space-around",
+    marginTop: "1.1rem",
     marginRight: "2rem",
   },
   logo: {
@@ -62,7 +62,7 @@ const Navbar = () => {
             href="/"
             startIcon={<HomeIcon aria-label="home link" />}
           >
-            HTHR-WHT
+            hthr-wht
           </ColorButton>
         </div>
         <div>

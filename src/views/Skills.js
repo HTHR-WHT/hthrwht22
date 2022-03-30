@@ -5,7 +5,7 @@ download resume pdf link
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import Container from "@mui/material/Container";
-import { Paper, Divider } from "@mui/material";
+import { Paper, Divider, Typography } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -14,6 +14,7 @@ import TerminalIcon from "@mui/icons-material/Terminal";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import GroupsIcon from "@mui/icons-material/Groups";
 import skillLg from "../assets/desktop_portfolio.png";
+// import { WrapText } from "@mui/icons-material";
 
 /* MUI styles */
 const useStyles = makeStyles((theme) => ({
@@ -28,21 +29,37 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: theme.mixins.toolbar,
   paper: {
-    display: "flex",
-    justifyContent: "space-evenly",
+    // flexDirection: "column",
+    // justifyContent: "space-evenly",
     minHeight: "80vh",
+    width: "100%",
+    maxWidth: "1536px",
+    margin: "0 auto",
   },
-  list: {
+  container: {
     display: "flex",
-    justifyContent: "space-evenly"
+    flexWrap: "wrap",
+
+    // justifyContent: "space-evenly",
   },
-  listHeader: {
-    flexDirection: "row",
-    justifyContent: "center",
+  box: {
+    // minHeight: "80vh",
+    minHeight: "80vh",
+    // minWidth: "375px",
+    maxWidth: "384px",
+    flexGrow: "1",
+
   },
+  // listHeader: {
+  //   flexDirection: "column",
+  //   justifyContent: "center",
+  // },
   listItem: {
+    // display: "flex",
     flexDirection: "column",
-    alignContent: "center",
+    justifyContent: "center",
+    // flex: "1 26%",
+    // flexGrow: "3",
   },
 }));
 
@@ -53,33 +70,64 @@ const Skills = () => {
       <Container maxWidth="lg">
         <div className={classes.toolbar}></div>
         <Paper className={classes.paper} elevation={3}>
-          <List className={classes.list}>
-            <div aria-label="creative skills list">
-              <ListItem className={classes.listHeader}>
+          <List className={classes.container}>
+            <div className={classes.box} aria-label="creative skills list">
+              <ListItem className={classes.listItem}>
                 <ListItemIcon aria-label="palette icon">
-                  <ColorLensIcon fontSize="large" sx={{ color: "black" }} />
+                  <ColorLensIcon sx={{ color: "black", fontSize: 50 }} />
                 </ListItemIcon>
                 <ListItemText primary="CREATIVE" />
               </ListItem>
-            </div>
-
-            <Divider orientation="vertical" flexItem variant="middle" />
-            <div aria-label="technical skills list">
-              <ListItem className={classes.listHeader}>
-                <ListItemIcon aria-label="terminal icon">
-                  <TerminalIcon fontSize="large" sx={{ color: "black" }} />
-                </ListItemIcon>
-                <ListItemText primary="TECHNICAL" />
+              <ListItem className={classes.listItem}>
+                <ListItemText
+                  secondary={
+                    <Typography variant="body1">
+                      Do you have Paris recommendations?
+                    </Typography>
+                  }
+                />
               </ListItem>
             </div>
 
             <Divider orientation="vertical" flexItem variant="middle" />
-            <div aria-label="professional skills list">
-              <ListItem className={classes.listHeader}>
+
+            <div className={classes.box} aria-label="technical skills list">
+              <ListItem className={classes.listItem}>
+                <ListItemIcon aria-label="terminal icon">
+                  <TerminalIcon sx={{ color: "black", fontSize: 50 }} />
+                </ListItemIcon>
+                <ListItemText primary="TECHNICAL" />
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <ListItemText
+                  secondary={
+                    <Typography variant="body1">
+                      Do you have Paris recommendations? Have you ever…been to
+                      Mars this time of year? I hear it's lovely...
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            </div>
+
+            <Divider orientation="vertical" flexItem variant="middle" />
+
+            <div className={classes.box} aria-label="professional skills list">
+              <ListItem className={classes.listItem}>
                 <ListItemIcon aria-label="groups icon">
-                  <GroupsIcon fontSize="large" sx={{ color: "black" }} />
+                  <GroupsIcon sx={{ color: "black", fontSize: 50 }} />
                 </ListItemIcon>
                 <ListItemText primary="PROFESSIONAL" />
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <ListItemText
+                  secondary={
+                    <Typography variant="body1">
+                      Do you have Paris recommendations? Have you ever
+                      manifested all of your dreams?
+                    </Typography>
+                  }
+                />
               </ListItem>
             </div>
           </List>

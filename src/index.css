@@ -6,7 +6,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 /*PRE-MUI STYLES*/
 /*RESPONSIVE BACKGROUNDS*/
 /*Avoid downloading background on smaller screen*/
@@ -111,19 +110,19 @@ a:hover {
 #myName {
   font-family: "Raleway";
   font-size: 72px; */
-  /* text-align: center; */
-  /* letter-spacing: 5px; */
-  /* margin-top: 18%;
+/* text-align: center; */
+/* letter-spacing: 5px; */
+/* margin-top: 18%;
   margin-bottom: 0px; */
-  /* text-shadow: 2px 2px 5px #c389b3;
+/* text-shadow: 2px 2px 5px #c389b3;
 }
 
 #sweTitle {
   font-family: "Cabin";
   font-size: 36px; */
-  /* text-align: center; */
-  /* letter-spacing: 20px; */
-  /* margin-top: 0px; */
+/* text-align: center; */
+/* letter-spacing: 20px; */
+/* margin-top: 0px; */
 /* } */
 
 /*PORTFOLIO PAGE CSS*/
