@@ -1,145 +1,115 @@
-import { React, useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import linkedInLogo from "../assets/icons8-linkedin-50.png";
-import githubLogo from "../assets/icons8-github-50.png";
+import React from "react";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import { makeStyles } from "@mui/styles";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import CodeIcon from "@mui/icons-material/Code";
+import LogoDevIcon from "@mui/icons-material/LogoDev";
+import HomeIcon from "@mui/icons-material/Home";
 
+
+/* MUI styles */
+const useStyles = makeStyles((theme) => ({
+  navbar: {
+    display: "flex",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#F5F5F530",
+  },
+  pages: {
+    display: "flex",
+    width: "400px",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    flexBasis: "auto",
+    marginLeft: "1.5rem",
+  },
+  logoContainer: {
+    display: "flex",
+    width: "100px",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: "1.1rem",
+    marginRight: "2rem",
+  },
+  logo: {
+    color: "black",
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+}));
+/* custom nav button styles */
+const ColorButton = styled(Button)(({ theme }) => ({
+  color: "#000",
+  "&:hover": {
+    color: theme.palette.secondary.main,
+  },
+}));
+
+/* COMPONENT */
 const Navbar = () => {
-  const [path, setPath] = useState("");
-  const location = useLocation();
+  const classes = useStyles();
 
-  useEffect(() => {
-    setPath(location.pathname);
-  }, [location.pathname]);
+  return (
+    <div className={classes.navbar}>
+      <div className={classes.pages}>
+        <div>
+          <ColorButton
+            variant="text"
+            href="/"
+            startIcon={<HomeIcon aria-label="home link" />}
 
-  if (path === "/home" || "/") {
-    return (
-      <nav>
-        <div className="leftLinks">
-          <a
-            href="https://www.linkedin.com/in/heather-white-nyc/"
-            target="_blank"
-            rel="noreferrer"
           >
-            <img
-              className="logoLinks"
-              src={linkedInLogo}
-              alt="Link to engineer's LinkedIn page."
-            />
-          </a>
-          <NavLink to="/resume" style={{ textDecoration: "none" }}>
-            resume
-          </NavLink>
+            hthr-wht
+          </ColorButton>
         </div>
-        <div id="centerLink">
-          <NavLink to="/home" style={{ textDecoration: "none" }}>
-            HTHR-WHT
-          </NavLink>
+        <div>
+          <ColorButton
+            variant="text"
+            href="/skills"
+            startIcon={<LogoDevIcon aria-label="tech skills link" />}
+          >
+            skills
+          </ColorButton>
         </div>
-        <div className="rightLinks">
-          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
+
+        <div>
+          <ColorButton
+            variant="text"
+            href="/portfolio"
+            startIcon={<CodeIcon aria-label="portfolio link" />}
+          >
             portfolio
-          </NavLink>
-          <a
-            href="https://github.com/HTHR-WHT"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={githubLogo}
-              alt="Link to engineer's github page."
-            />
-          </a>
+          </ColorButton>
+
         </div>
-      </nav>
-    );
-  }
-  if (path === "/portfolio") {
-    return (
-      <nav className="navLinks">
-        <div id="leftLinks">
-          <a
-            href="https://www.linkedin.com/in/heather-white-nyc/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={linkedInLogo}
-              alt="Link to engineer's LinkedIn page."
-            />
-          </a>
-          <NavLink to="/resume" style={{ textDecoration: "none" }}>
-            resume
-          </NavLink>
-        </div>
-        <div id="centerLink">
-          <NavLink to="/home" style={{ textDecoration: "none" }}>
-            HTHR-WHT
-          </NavLink>
-        </div>
-        <div id="rightLinks">
-          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
-            portfolio
-          </NavLink>
-          <a
-            href="https://github.com/HTHR-WHT"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={githubLogo}
-              alt="Link to engineer's github page."
-            />
-          </a>
-        </div>
-      </nav>
-    );
-  }
-  if (path === "/resume") {
-    return (
-      <nav className="navLinks">
-        <div id="leftLinks">
-          <a
-            href="https://www.linkedin.com/in/heather-white-nyc/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={linkedInLogo}
-              alt="Link to engineer's LinkedIn page."
-            />
-          </a>
-          <NavLink to="/resume" style={{ textDecoration: "none" }}>
-            resume
-          </NavLink>
-        </div>
-        <div id="centerLink">
-          <NavLink to="/home" style={{ textDecoration: "none" }}>
-            HTHR-WHT
-          </NavLink>
-        </div>
-        <div id="rightLinks">
-          <NavLink to="/portfolio" style={{ textDecoration: "none" }}>
-            portfolio
-          </NavLink>
-          <a
-            href="https://github.com/HTHR-WHT"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="logoLinks"
-              src={githubLogo}
-              alt="Link to engineer's github page."
-            />
-          </a>
-        </div>
-      </nav>
-    );
-  }
+      </div>
+      <div className={classes.logoContainer}>
+        <a
+          href="https://www.linkedin.com/in/heather-white-nyc/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LinkedInIcon
+            className={classes.logo}
+            fontSize="large"
+            aria-label="linked in link"
+          />
+        </a>
+        <a href="https://github.com/HTHR-WHT" target="_blank" rel="noreferrer">
+          <GitHubIcon
+            className={classes.logo}
+            fontSize="large"
+            aria-label="github repo link"
+          />
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;

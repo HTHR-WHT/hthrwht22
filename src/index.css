@@ -1,27 +1,21 @@
-/* html {
-  height: 100%;
-} */
-/*fonts in body og css
-/* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-*/
-/*og css...not sure I need it?
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} 
-*/
+/*MUI friendly styles*/
+body {
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+/*PRE-MUI STYLES*/
 /*RESPONSIVE BACKGROUNDS*/
 /*Avoid downloading background on smaller screen*/
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   html {
     background: none;
   }
-}
+} */
 /*Using media queries to select right sized background image to download*/
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   html {
     background: url("./assets/mobile_landing.png") no-repeat top center fixed;
   }
@@ -51,10 +45,10 @@ body {
   font-family: "Cabin", sans-serif, "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 /*NAV CSS*/
-nav {
+/* nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,13 +62,13 @@ nav a {
 }
 a:hover {
   color: red;
-}
+} */
 
 /* a:active {
   color: hotpink;
 } */
 
-.logoLinks {
+/* .logoLinks {
   height: 55px;
   padding-right: 30px;
   padding-left: 30px;
@@ -89,7 +83,7 @@ a:hover {
   margin-left: 10px;
 }
 
-#centerLink {
+.centerLink {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,10 +98,10 @@ a:hover {
   align-items: center;
   margin-top: 35px;
   margin-right: 10px;
-}
+} */
 
 /*HOME PAGE TEXT CSS*/
-.landing-text {
+/* .landing-text {
   text-align: center;
   position: absolute;
   top: 50%;
@@ -116,21 +110,21 @@ a:hover {
 }
 #myName {
   font-family: "Raleway";
-  font-size: 72px;
-  /* text-align: center; */
-  letter-spacing: 5px;
-  /* margin-top: 18%;
+  font-size: 72px; */
+/* text-align: center; */
+/* letter-spacing: 5px; */
+/* margin-top: 18%;
   margin-bottom: 0px; */
-  text-shadow: 2px 2px 5px #c389b3;
+/* text-shadow: 2px 2px 5px #c389b3;
 }
 
 #sweTitle {
   font-family: "Cabin";
-  font-size: 36px;
-  /* text-align: center; */
-  letter-spacing: 20px;
-  /* margin-top: 0px; */
-}
+  font-size: 36px; */
+/* text-align: center; */
+/* letter-spacing: 20px; */
+/* margin-top: 0px; */
+/* } */
 
 /*PORTFOLIO PAGE CSS*/
 /* .portfolio {
@@ -138,7 +132,7 @@ a:hover {
   background-color: #f7def0;
   opacity: 55%;
 } */
-.projectContainer {
+/* .projectContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -188,5 +182,7 @@ a:hover {
 /* img.portfolioLogoLinks {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+
+  justify-content: space-between;
+
 } */

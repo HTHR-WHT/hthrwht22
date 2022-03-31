@@ -1,41 +1,63 @@
 import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
-import Portfolio from "./components/Portfolio";
-import Resume from "./components/Resume";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Home from "./views/Home";
+import Portfolio from "./views/Portfolio";
+import Skills from "./views/Skills";
+import Layout from "./components/Layout";
 
+/* MUI THEME */
+export const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#dcd5d9",
+    },
+    secondary: {
+      main: "#7b68ee",
+    },
+  },
+  typography: {
+    fontFamily: "Raleway",
+    h1: {
+      fontFamily: "Raleway",
+      fontWeight: 500,
+      letterSpacing: "1rem",
+    },
+    h4: {
+      fontFamily: "Cabin",
+      letterSpacing: "1.5rem",
+    },
+    body1: {
+      fontFamily: "Cabin",
+    },
+    body2: {
+      fontFamily: "Cabin",
+    },
+  },
+  mixins: {
+    toolbar: {
+      minHeight: "7rem"
+    }
+  }
+});
+
+/* COMPONENT */
 const App = () => {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<LandingPage />} />
-          <Route path="/home" element={<LandingPage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-      </Router>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/skills" element={<Skills />} />
+            </Routes>
+          </Layout>
+        </Router>
+      </ThemeProvider>
     </>
   );
 };
 
 export default App;
-
-// import logo from './assets/smiley-face.png';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <h3>Heather White</h3>
-//         <p>
-//           full stack software engineer
-//         </p>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
