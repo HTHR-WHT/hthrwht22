@@ -1,11 +1,7 @@
-/*
-containers for tech skills, transferrable skills, my key vals, my interests/loves
-download resume pdf link
-*/
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import Container from "@mui/material/Container";
-import { Paper, Divider, Typography } from "@mui/material";
+import { Paper, Divider, Typography, Button } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -14,6 +10,7 @@ import TerminalIcon from "@mui/icons-material/Terminal";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import GroupsIcon from "@mui/icons-material/Groups";
 import skillLg from "../assets/desktop_portfolio.png";
+import resume from "../assets/HeatherWhite_Resume_04_22.pdf";
 import {
   creativeSkills,
   topTechSkills,
@@ -32,6 +29,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-3.7rem",
   },
   toolbar: theme.mixins.toolbar,
+  buttonBox: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: "80vw",
+    minHeight: "112px",
+  },
   paper: {
     // flexDirection: "column",
     // justifyContent: "space-evenly",
@@ -67,10 +71,24 @@ const useStyles = makeStyles((theme) => ({
 
 const Skills = () => {
   const classes = useStyles();
+
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = resume;
+    link.href = `${resume}`;
+    link.click();
+  };
+
   return (
     <div className={classes.root}>
       <Container maxWidth="lg">
-        <div className={classes.toolbar}></div>
+        <div className={classes.toolbar}>
+          <div className={classes.buttonBox}>
+            <Button color="secondary" onClick={onDownload} variant="contained">
+              Download My Resume
+            </Button>
+          </div>
+        </div>
         <Paper className={classes.paper} elevation={3}>
           <List className={classes.container}>
             <div className={classes.box} aria-label="creative skills list">
