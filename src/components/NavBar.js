@@ -8,6 +8,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import HomeIcon from "@mui/icons-material/Home";
 
+
 /* MUI styles */
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -61,6 +62,7 @@ const Navbar = () => {
             variant="text"
             href="/"
             startIcon={<HomeIcon aria-label="home link" />}
+
           >
             hthr-wht
           </ColorButton>
@@ -83,6 +85,7 @@ const Navbar = () => {
           >
             portfolio
           </ColorButton>
+
         </div>
       </div>
       <div className={classes.logoContainer}>
