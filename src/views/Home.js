@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
-    marginTop: "-4.2rem",
+    marginTop: "-3.7rem",
   },
   text: {
     display: "flex",

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
-    marginTop: "-4.2rem",
+    marginTop: "-3.7rem",
   },
   toolbar: theme.mixins.toolbar,
   paper: {
@@ -33,22 +33,20 @@ const useStyles = makeStyles((theme) => ({
     // justifyContent: "space-evenly",
     minHeight: "80vh",
     width: "100%",
-    maxWidth: "1536px",
+    maxWidth: "80vw",
     margin: "0 auto",
   },
   container: {
     display: "flex",
     flexWrap: "wrap",
-
-    // justifyContent: "space-evenly",
+    justifyContent: "space-evenly",
   },
   box: {
     // minHeight: "80vh",
     minHeight: "80vh",
     // minWidth: "375px",
-    maxWidth: "384px",
+    maxWidth: "24vw",
     flexGrow: "1",
-
   },
   // listHeader: {
   //   flexDirection: "column",
@@ -74,17 +72,44 @@ const Skills = () => {
             <div className={classes.box} aria-label="creative skills list">
               <ListItem className={classes.listItem}>
                 <ListItemIcon aria-label="palette icon">
-                  <ColorLensIcon sx={{ color: "black", fontSize: 50 }} />
+                  <ColorLensIcon
+                    sx={{
+                      color: "#7b68ee",
+                      fontSize: 50,
+                      marginBottom: "1rem",
+                    }}
+                  />
                 </ListItemIcon>
-                <ListItemText primary="CREATIVE" />
+                <ListItemText
+                  primary="CREATIVE"
+                  primaryTypographyProps={{
+                    fontFamily: "Raleway",
+                    fontWeight: "700",
+                  }}
+                />
               </ListItem>
               <ListItem className={classes.listItem}>
                 <ListItemText
                   secondary={
-                    <Typography variant="body1">
-                      Do you have Paris recommendations?
+                    <Typography
+                      variant="body1"
+                      align="center"
+                      marginBottom="2rem"
+                    >
+                      I am a studio trained artist that values simple,
+                      thoughtful design that's delightful and tells a story with
+                      ease.
                     </Typography>
                   }
+                />
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <ListItemText
+                  primary="TOOLS"
+                  primaryTypographyProps={{
+                    fontFamily: "Raleway",
+                    fontWeight: "500",
+                  }}
                 />
               </ListItem>
             </div>
@@ -94,18 +119,44 @@ const Skills = () => {
             <div className={classes.box} aria-label="technical skills list">
               <ListItem className={classes.listItem}>
                 <ListItemIcon aria-label="terminal icon">
-                  <TerminalIcon sx={{ color: "black", fontSize: 50 }} />
+                  <TerminalIcon
+                    sx={{
+                      color: "#7b68ee",
+                      fontSize: 50,
+                      marginBottom: "1rem",
+                    }}
+                  />
                 </ListItemIcon>
-                <ListItemText primary="TECHNICAL" />
+                <ListItemText
+                  primary="TECHNICAL"
+                  primaryTypographyProps={{
+                    fontFamily: "Raleway",
+                    fontWeight: "700",
+                  }}
+                />
               </ListItem>
               <ListItem className={classes.listItem}>
                 <ListItemText
                   secondary={
-                    <Typography variant="body1">
-                      Do you have Paris recommendations? Have you ever…been to
-                      Mars this time of year? I hear it's lovely...
+                    <Typography
+                      variant="body1"
+                      align="center"
+                      marginBottom="2rem"
+                    >
+                      I am a full stack software engineer that enjoys the
+                      creative magic of the front-end and organized structure of
+                      the back-end.
                     </Typography>
                   }
+                />
+              </ListItem>
+              <ListItem className={classes.listItem}>
+                <ListItemText
+                  primary="SKILLS"
+                  primaryTypographyProps={{
+                    fontFamily: "Raleway",
+                    fontWeight: "500",
+                  }}
                 />
               </ListItem>
             </div>
@@ -115,27 +166,48 @@ const Skills = () => {
             <div className={classes.box} aria-label="professional skills list">
               <ListItem className={classes.listItem}>
                 <ListItemIcon aria-label="groups icon">
-                  <GroupsIcon sx={{ color: "black", fontSize: 50 }} />
+                  <GroupsIcon
+                    sx={{
+                      color: "#7b68ee",
+                      fontSize: 50,
+                      marginBottom: "1rem",
+                    }}
+                  />
                 </ListItemIcon>
-                <ListItemText primary="PROFESSIONAL" />
+                <ListItemText
+                  primary="PROFESSIONAL"
+                  primaryTypographyProps={{
+                    fontFamily: "Raleway",
+                    fontWeight: "700",
+                  }}
+                />
               </ListItem>
               <ListItem className={classes.listItem}>
                 <ListItemText
                   secondary={
-                    <Typography variant="body1">
-                      Do you have Paris recommendations? Have you ever
-                      manifested all of your dreams?
+                    <Typography
+                      variant="body1"
+                      align="center"
+                      marginBottom="2rem"
+                    >
+                      I am a reliable collaborator with 7 years of experience
+                      planning, organizing, and meeting deadlines on large scale
+                      productions.
                     </Typography>
                   }
                 />
               </ListItem>
+              <ListItem className={classes.listItem}>
+                <ListItemText
+                  primary="ASSETS"
+                  primaryTypographyProps={{
+                    fontFamily: "Raleway",
+                    fontWeight: "500",
+                  }}
+                />
+              </ListItem>
             </div>
           </List>
-          {/* <Typography variant="h5">Creative</Typography>
-          <Divider orientation="vertical" flexItem="true" variant="middle" />
-          <Typography variant="h5">Technical</Typography>
-          <Divider orientation="vertical" flexItem="true" variant="middle" />
-          <Typography variant="h5">Professional</Typography> */}
         </Paper>
       </Container>
     </div>
