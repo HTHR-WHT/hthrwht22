@@ -86,9 +86,7 @@ const ProjectCard = ({ project }) => {
           <CardContent>
             <Typography sx={{ fontWeight: "bold" }}>Tech Stack:</Typography>
             <Typography paragraph>{project.tech}</Typography>
-            <Typography sx={{ fontWeight: "bold" }}>
-              Contributions:
-            </Typography>
+            <Typography sx={{ fontWeight: "bold" }}>Contributions:</Typography>
             <Typography paragraph>{project.work}</Typography>
           </CardContent>
         </Collapse>

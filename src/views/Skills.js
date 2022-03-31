@@ -14,7 +14,11 @@ import TerminalIcon from "@mui/icons-material/Terminal";
 import ColorLensIcon from "@mui/icons-material/ColorLens";
 import GroupsIcon from "@mui/icons-material/Groups";
 import skillLg from "../assets/desktop_portfolio.png";
-// import { WrapText } from "@mui/icons-material";
+import {
+  creativeSkills,
+  topTechSkills,
+  professionalAssets,
+} from "../data/resumeSkills";
 
 /* MUI styles */
 const useStyles = makeStyles((theme) => ({
@@ -76,7 +80,7 @@ const Skills = () => {
                     sx={{
                       color: "#7b68ee",
                       fontSize: 50,
-                      marginBottom: "1rem",
+                      marginBottom: ".5rem",
                     }}
                   />
                 </ListItemIcon>
@@ -94,7 +98,7 @@ const Skills = () => {
                     <Typography
                       variant="body1"
                       align="center"
-                      marginBottom="2rem"
+                      marginBottom=".5rem"
                     >
                       I am a studio trained artist that values simple,
                       thoughtful design that's delightful and tells a story with
@@ -108,10 +112,26 @@ const Skills = () => {
                   primary="TOOLS"
                   primaryTypographyProps={{
                     fontFamily: "Raleway",
-                    fontWeight: "500",
+                    fontWeight: "700",
+                    color: "#7b68ee",
                   }}
                 />
               </ListItem>
+              {creativeSkills.map((skill) => (
+                <ListItem key={skill}>
+                  <ListItemText
+                    secondary={
+                      <Typography
+                        variant="body2"
+                        align="center"
+                        marginTop={"-1rem"}
+                      >
+                        {skill}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              ))}
             </div>
 
             <Divider orientation="vertical" flexItem variant="middle" />
@@ -123,7 +143,7 @@ const Skills = () => {
                     sx={{
                       color: "#7b68ee",
                       fontSize: 50,
-                      marginBottom: "1rem",
+                      marginBottom: ".5rem",
                     }}
                   />
                 </ListItemIcon>
@@ -141,7 +161,7 @@ const Skills = () => {
                     <Typography
                       variant="body1"
                       align="center"
-                      marginBottom="2rem"
+                      marginBottom=".5rem"
                     >
                       I am a full stack software engineer that enjoys the
                       creative magic of the front-end and organized structure of
@@ -155,10 +175,26 @@ const Skills = () => {
                   primary="SKILLS"
                   primaryTypographyProps={{
                     fontFamily: "Raleway",
-                    fontWeight: "500",
+                    fontWeight: "700",
+                    color: "#7b68ee",
                   }}
                 />
               </ListItem>
+              {topTechSkills.map((skill) => (
+                <ListItem key={skill} className={classes.listItem}>
+                  <ListItemText
+                    secondary={
+                      <Typography
+                        variant="body2"
+                        align="center"
+                        marginTop={"-1rem"}
+                      >
+                        {skill}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              ))}
             </div>
 
             <Divider orientation="vertical" flexItem variant="middle" />
@@ -170,7 +206,7 @@ const Skills = () => {
                     sx={{
                       color: "#7b68ee",
                       fontSize: 50,
-                      marginBottom: "1rem",
+                      marginBottom: ".5rem",
                     }}
                   />
                 </ListItemIcon>
@@ -188,7 +224,7 @@ const Skills = () => {
                     <Typography
                       variant="body1"
                       align="center"
-                      marginBottom="2rem"
+                      marginBottom=".5rem"
                     >
                       I am a reliable collaborator with 7 years of experience
                       planning, organizing, and meeting deadlines on large scale
@@ -202,10 +238,26 @@ const Skills = () => {
                   primary="ASSETS"
                   primaryTypographyProps={{
                     fontFamily: "Raleway",
-                    fontWeight: "500",
+                    fontWeight: "700",
+                    color: "#7b68ee",
                   }}
                 />
               </ListItem>
+              {professionalAssets.map((skill) => (
+                <ListItem key={skill} className={classes.listItem}>
+                  <ListItemText
+                    secondary={
+                      <Typography
+                        variant="body2"
+                        align="center"
+                        marginTop={"-1rem"}
+                      >
+                        {skill}
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              ))}
             </div>
           </List>
         </Paper>

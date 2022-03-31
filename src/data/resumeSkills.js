@@ -1,4 +1,35 @@
-export const topSkills = [
+export const creativeSkills = [
+  "Figma",
+  "Procreate",
+  "Color theory",
+  "Composition",
+  "Illustration",
+  "Digital illustration",
+  "Goauche painting",
+  "Costume design",
+  "Character design",
+  "Textile design",
+];
+
+export const topTechSkills = [
+  "JavaScript",
+  "Node.js",
+  "React",
+  "Axios HTTP",
+  "Express",
+  "React/Redux",
+  "React Native",
+  "Expo",
+  "Sequelize",
+  "PostgreSQL",
+  "Git",
+  "Github",
+  "Material UI",
+  "Firebase",
+  "p5.js",
+];
+
+export const allTechSkills = [
   "HTML5",
   "CSS3",
   "JavaScript",
@@ -15,9 +46,7 @@ export const topSkills = [
   "Git",
   "Github",
   "NPM",
-];
-
-export const medSkills = [
+  "VSCode",
   "Material UI",
   "Firebase",
   "bcrypt",
@@ -30,10 +59,17 @@ export const medSkills = [
   "p5.js",
 ];
 
-export const softSkills = [
+export const professionalAssets = [
+  "Agile Development",
   "Communication",
   "Collaboration",
+  "Planning",
   "Organization",
   "Creative problem solving",
   "Attention to detail",
+  "Self-led learning",
+  "Active listening",
+  "Inclusive",
+  "Kind",
+  "Supportive",
 ];
