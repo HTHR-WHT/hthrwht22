@@ -37,8 +37,6 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "112px",
   },
   paper: {
-    // flexDirection: "column",
-    // justifyContent: "space-evenly",
     minHeight: "80vh",
     width: "100%",
     maxWidth: "80vw",
@@ -50,22 +48,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
   },
   box: {
-    // minHeight: "80vh",
     minHeight: "80vh",
-    // minWidth: "375px",
     maxWidth: "24vw",
     flexGrow: "1",
   },
-  // listHeader: {
-  //   flexDirection: "column",
-  //   justifyContent: "center",
-  // },
   listItem: {
-    // display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    // flex: "1 26%",
-    // flexGrow: "3",
   },
 }));
 
