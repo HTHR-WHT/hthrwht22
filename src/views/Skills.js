@@ -32,15 +32,16 @@ const useStyles = makeStyles((theme) => ({
   buttonBox: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-end",
     maxWidth: "80vw",
     minHeight: "112px",
+    margin: "auto",
   },
   paper: {
     minHeight: "80vh",
     width: "100%",
     maxWidth: "80vw",
-    margin: "0 auto",
+    margin: "1rem auto",
   },
   container: {
     display: "flex",
