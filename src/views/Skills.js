@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     minHeight: "80vh",
-    maxWidth: "24vw",
+    maxWidth: "20vw",
     flexGrow: "1",
   },
   listItem: {
