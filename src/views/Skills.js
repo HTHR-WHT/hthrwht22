@@ -37,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "112px",
   },
   paper: {
-    maxHeight: "80vh",
+    minHeight: "80vh",
     width: "100%",
     maxWidth: "80vw",
-    margin: "0 auto",
+    margin: "1rem auto",
   },
   container: {
     display: "flex",
