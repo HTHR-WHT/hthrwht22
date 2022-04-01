@@ -26,22 +26,22 @@ const useStyles = makeStyles((theme) => ({
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
-    marginTop: "-3.7rem",
+    marginTop: "-6.5rem",
   },
-  toolbar: theme.mixins.toolbar,
+  // toolbar: theme.mixins.toolbar,
   buttonBox: {
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-end",
     maxWidth: "80vw",
-    minHeight: "112px",
-    margin: "auto",
+    minHeight: "100px",
+    margin: "3rem auto 0 auto",
   },
   paper: {
     minHeight: "80vh",
     width: "100%",
-    maxWidth: "80vw",
-    margin: "1rem auto",
+    maxWidth: "90vw",
+    margin: "1.5rem auto",
   },
   container: {
     display: "flex",
@@ -72,12 +72,12 @@ const Skills = () => {
   return (
     <div className={classes.root}>
       <Container maxWidth="lg">
-        <div className={classes.toolbar}>
+        {/* <div className={classes.toolbar}> */}
           <div className={classes.buttonBox}>
             <Button color="secondary" onClick={onDownload} variant="contained">
               Download My Resume
             </Button>
-          </div>
+          {/* </div> */}
         </div>
         <Paper className={classes.paper} elevation={3}>
           <List className={classes.container}>
@@ -97,6 +97,7 @@ const Skills = () => {
                   primaryTypographyProps={{
                     fontFamily: "Raleway",
                     fontWeight: "700",
+                    marginBottom: "-.5rem",
                   }}
                 />
               </ListItem>
@@ -160,6 +161,7 @@ const Skills = () => {
                   primaryTypographyProps={{
                     fontFamily: "Raleway",
                     fontWeight: "700",
+                    marginBottom: "-.5rem",
                   }}
                 />
               </ListItem>
@@ -223,6 +225,7 @@ const Skills = () => {
                   primaryTypographyProps={{
                     fontFamily: "Raleway",
                     fontWeight: "700",
+                    marginBottom: "-.5rem",
                   }}
                 />
               </ListItem>
