@@ -21,14 +21,15 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up("xs")]: {
-      minHeight: "100vh",
+      // width: "100%",
+      height: "100vh",
+      paddingBottom: "1vh",
       backgroundImage: `url(${skillLg})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     },
     marginTop: "-6.5rem",
   },
-  // toolbar: theme.mixins.toolbar,
   buttonBox: {
     display: "flex",
     justifyContent: "center",
@@ -71,13 +72,11 @@ const Skills = () => {
 
   return (
     <div className={classes.root}>
-      <Container maxWidth="lg">
-        {/* <div className={classes.toolbar}> */}
-          <div className={classes.buttonBox}>
-            <Button color="secondary" onClick={onDownload} variant="contained">
-              Download My Resume
-            </Button>
-          {/* </div> */}
+      <Container>
+        <div className={classes.buttonBox}>
+          <Button color="secondary" onClick={onDownload} variant="contained">
+            Download My Resume
+          </Button>
         </div>
         <Paper className={classes.paper} elevation={3}>
           <List className={classes.container}>

@@ -8,7 +8,6 @@ import CodeIcon from "@mui/icons-material/Code";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import HomeIcon from "@mui/icons-material/Home";
 
-
 /* MUI styles */
 const useStyles = makeStyles((theme) => ({
   navbar: {
@@ -17,11 +16,12 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#F5F5F530",
+    backgroundColor: "none",
+    zIndex: theme.zIndex.appBar,
   },
   pages: {
     display: "flex",
-    width: "400px",
+    width: "25rem",
     flexDirection: "row",
     justifyContent: "space-around",
     flexBasis: "auto",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     display: "flex",
-    width: "100px",
+    width: "6.25rem",
     flexDirection: "row",
     justifyContent: "space-around",
     marginTop: "1.1rem",
@@ -62,7 +62,6 @@ const Navbar = () => {
             variant="text"
             href="/"
             startIcon={<HomeIcon aria-label="home link" />}
-
           >
             hthr-wht
           </ColorButton>
@@ -85,7 +84,6 @@ const Navbar = () => {
           >
             portfolio
           </ColorButton>
-
         </div>
       </div>
       <div className={classes.logoContainer}>
