@@ -1,5 +1,4 @@
-## a simple portfolio build using create react app
-
+## a simple portfolio build
 ### hang tight...it's a work in progress y'all
 
 <!-- # Getting Started with Create React App
