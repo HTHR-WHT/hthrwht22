@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     minHeight: "calc(100vh - 10rem)", // Adjust this line as needed
     width: "100%",
-    maxWidth: "90vw",
+    maxWidth: "100vw",
     margin: "1.5rem auto",
     overflow: "hidden", // Added this line
   },
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     minHeight: "80vh",
-    maxWidth: "20vw",
+    maxWidth: "25vw",
     flexGrow: "1",
     marginBottom: "1rem", // Added this line
   },
