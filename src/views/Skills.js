@@ -21,12 +21,12 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up("xs")]: {
-      // width: "100%",
-      height: "100vh",
+      minHeight: "100vh",
       paddingBottom: "1vh",
       backgroundImage: `url(${skillLg})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
+      backgroundPosition: "center center",
     },
     marginTop: "-6.5rem",
   },
@@ -36,27 +36,36 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-end",
     maxWidth: "80vw",
     minHeight: "100px",
-    margin: "3rem auto 0 auto",
+    margin: ".5rem auto 0 auto",
   },
   paper: {
-    minHeight: "80vh",
+    minHeight: "calc(100vh - 10rem)", // Adjust this line as needed
     width: "100%",
-    maxWidth: "90vw",
+    maxWidth: "100vw",
     margin: "1.5rem auto",
+    overflow: "hidden", // Added this line
   },
   container: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
+    height: "100%", // Add this line
+    marginBottom: "1rem", // Added this line
+    padding: "0",
   },
   box: {
     minHeight: "80vh",
-    maxWidth: "20vw",
+    maxWidth: "25vw",
     flexGrow: "1",
+    marginBottom: ".5rem", // Added this line
   },
   listItem: {
+    display: "flex", // Added this line
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-start", // Modified this line
+    alignItems: "center", // Added this line
+    minHeight: "-20%", // Adjust this line as needed
+    padding: "0", // Added this line
   },
 }));
 
@@ -86,8 +95,8 @@ const Skills = () => {
                   <ColorLensIcon
                     sx={{
                       color: "#7b68ee",
-                      fontSize: 50,
-                      marginBottom: ".5rem",
+                      fontSize: 45,
+                      marginBottom: "0",
                     }}
                   />
                 </ListItemIcon>
@@ -107,6 +116,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
+                      fontSize="14px"
                     >
                       I am a studio trained artist that values simple,
                       thoughtful design that's delightful and tells a story with
@@ -150,8 +160,8 @@ const Skills = () => {
                   <TerminalIcon
                     sx={{
                       color: "#7b68ee",
-                      fontSize: 50,
-                      marginBottom: ".5rem",
+                      fontSize: 45,
+                      marginBottom: "0",
                     }}
                   />
                 </ListItemIcon>
@@ -171,6 +181,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
+                      fontSize="14px"
                     >
                       I am a full stack software engineer that enjoys the
                       creative magic of the front-end and organized structure of
@@ -214,8 +225,8 @@ const Skills = () => {
                   <GroupsIcon
                     sx={{
                       color: "#7b68ee",
-                      fontSize: 50,
-                      marginBottom: ".5rem",
+                      fontSize: 45,
+                      marginBottom: "0",
                     }}
                   />
                 </ListItemIcon>
@@ -235,6 +246,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
+                      fontSize="14px"
                     >
                       I am a reliable collaborator with 7 years of experience
                       planning, organizing, and meeting deadlines on large scale
