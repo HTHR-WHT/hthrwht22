@@ -21,7 +21,6 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up("xs")]: {
-      // width: "100%",
       minHeight: "100vh",
       paddingBottom: "1vh",
       backgroundImage: `url(${skillLg})`,
@@ -37,8 +36,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-end",
     maxWidth: "80vw",
     minHeight: "100px",
-    margin: "2.5rem auto 0 auto",
-    marginBottom: "1rem", // Added this line
+    margin: ".5rem auto 0 auto",
   },
   paper: {
     minHeight: "calc(100vh - 10rem)", // Adjust this line as needed
@@ -59,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "80vh",
     maxWidth: "25vw",
     flexGrow: "1",
-    marginBottom: "1rem", // Added this line
+    marginBottom: ".5rem", // Added this line
   },
   listItem: {
     display: "flex", // Added this line
@@ -67,17 +65,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start", // Modified this line
     alignItems: "center", // Added this line
     minHeight: "-20%", // Adjust this line as needed
-    padding: ".5rem 0", // Added this line
-  },
-  // Custom class for list items containing paragraphs
-  paragraphListItem: {
-    margin: "0.5rem 0", // Adjust the margin as desired
-    padding: "0.5rem 0",
-    fontSize: "6px", // Adjust the font size as desired
-  },
-  divider: {
-    margin: "0.5rem 0", // Adjust the margin as desired
-    padding: "0",
+    padding: "0", // Added this line
   },
 }));
 
@@ -107,8 +95,8 @@ const Skills = () => {
                   <ColorLensIcon
                     sx={{
                       color: "#7b68ee",
-                      fontSize: 50,
-                      marginBottom: ".5rem",
+                      fontSize: 45,
+                      marginBottom: "0",
                     }}
                   />
                 </ListItemIcon>
@@ -128,7 +116,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
-                      className={classes.paragraphListItem}
+                      fontSize="14px"
                     >
                       I am a studio trained artist that values simple,
                       thoughtful design that's delightful and tells a story with
@@ -164,12 +152,7 @@ const Skills = () => {
               ))}
             </div>
 
-            <Divider
-              orientation="vertical"
-              flexItem
-              variant="middle"
-              className={classes.divider}
-            />
+            <Divider orientation="vertical" flexItem variant="middle" />
 
             <div className={classes.box} aria-label="technical skills list">
               <ListItem className={classes.listItem}>
@@ -177,8 +160,8 @@ const Skills = () => {
                   <TerminalIcon
                     sx={{
                       color: "#7b68ee",
-                      fontSize: 50,
-                      marginBottom: ".5rem",
+                      fontSize: 45,
+                      marginBottom: "0",
                     }}
                   />
                 </ListItemIcon>
@@ -198,7 +181,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
-                      className={classes.paragraphListItem}
+                      fontSize="14px"
                     >
                       I am a full stack software engineer that enjoys the
                       creative magic of the front-end and organized structure of
@@ -234,12 +217,7 @@ const Skills = () => {
               ))}
             </div>
 
-            <Divider
-              orientation="vertical"
-              flexItem
-              variant="middle"
-              className={classes.divider}
-            />
+            <Divider orientation="vertical" flexItem variant="middle" />
 
             <div className={classes.box} aria-label="professional skills list">
               <ListItem className={classes.listItem}>
@@ -247,8 +225,8 @@ const Skills = () => {
                   <GroupsIcon
                     sx={{
                       color: "#7b68ee",
-                      fontSize: 50,
-                      marginBottom: ".5rem",
+                      fontSize: 45,
+                      marginBottom: "0",
                     }}
                   />
                 </ListItemIcon>
@@ -268,7 +246,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
-                      className={classes.paragraphListItem}
+                      fontSize="14px"
                     >
                       I am a reliable collaborator with 7 years of experience
                       planning, organizing, and meeting deadlines on large scale
