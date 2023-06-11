@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.up("xs")]: {
       // width: "100%",
-      height: "100vh",
+      minHeight: "100vh",
       paddingBottom: "1vh",
       backgroundImage: `url(${skillLg})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
+      backgroundPosition: "center center",
     },
     marginTop: "-6.5rem",
   },
@@ -36,27 +37,47 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-end",
     maxWidth: "80vw",
     minHeight: "100px",
-    margin: "3rem auto 0 auto",
+    margin: "2.5rem auto 0 auto",
+    marginBottom: "1rem", // Added this line
   },
   paper: {
-    minHeight: "80vh",
+    minHeight: "calc(100vh - 10rem)", // Adjust this line as needed
     width: "100%",
     maxWidth: "90vw",
     margin: "1.5rem auto",
+    overflow: "hidden", // Added this line
   },
   container: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
+    height: "100%", // Add this line
+    marginBottom: "1rem", // Added this line
+    padding: "0",
   },
   box: {
     minHeight: "80vh",
     maxWidth: "20vw",
     flexGrow: "1",
+    marginBottom: "1rem", // Added this line
   },
   listItem: {
+    display: "flex", // Added this line
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-start", // Modified this line
+    alignItems: "center", // Added this line
+    minHeight: "-20%", // Adjust this line as needed
+    padding: ".5rem 0", // Added this line
+  },
+  // Custom class for list items containing paragraphs
+  paragraphListItem: {
+    margin: "0.5rem 0", // Adjust the margin as desired
+    padding: "0.5rem 0",
+    fontSize: "6px", // Adjust the font size as desired
+  },
+  divider: {
+    margin: "0.5rem 0", // Adjust the margin as desired
+    padding: "0",
   },
 }));
 
@@ -107,6 +128,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
+                      className={classes.paragraphListItem}
                     >
                       I am a studio trained artist that values simple,
                       thoughtful design that's delightful and tells a story with
@@ -142,7 +164,12 @@ const Skills = () => {
               ))}
             </div>
 
-            <Divider orientation="vertical" flexItem variant="middle" />
+            <Divider
+              orientation="vertical"
+              flexItem
+              variant="middle"
+              className={classes.divider}
+            />
 
             <div className={classes.box} aria-label="technical skills list">
               <ListItem className={classes.listItem}>
@@ -171,6 +198,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
+                      className={classes.paragraphListItem}
                     >
                       I am a full stack software engineer that enjoys the
                       creative magic of the front-end and organized structure of
@@ -206,7 +234,12 @@ const Skills = () => {
               ))}
             </div>
 
-            <Divider orientation="vertical" flexItem variant="middle" />
+            <Divider
+              orientation="vertical"
+              flexItem
+              variant="middle"
+              className={classes.divider}
+            />
 
             <div className={classes.box} aria-label="professional skills list">
               <ListItem className={classes.listItem}>
@@ -235,6 +268,7 @@ const Skills = () => {
                       variant="body1"
                       align="center"
                       marginBottom=".5rem"
+                      className={classes.paragraphListItem}
                     >
                       I am a reliable collaborator with 7 years of experience
                       planning, organizing, and meeting deadlines on large scale
